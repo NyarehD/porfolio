@@ -1,0 +1,43 @@
+* {
+  font-family: 'Aldrich';
+  margin: 0;
+}
+header {
+  height: 120px;
+  background-color: black;
+}
+.header-title {
+  color: white;
+  padding: 10px 70px;
+}
+.header-nav {
+  margin: 20px 30px;
+  max-width: 350px;
+  float: right;
+}
+.header-nav > ul > li {
+  display: inline-block;
+  padding: 0 20px 0 0;
+}
+.header-nav > ul > li > a, .footer-link > ul > li > a {
+  text-decoration: none;
+  color: #ccc;
+}
+.header-nav > ul >li > a:hover, .footer-link > ul > li > a:hover {
+  color: white;
+}
+footer {
+  height: 130px;
+  background-color: black;  
+}
+.footer-link {
+  float: right;
+  margin: 10px 70px;
+}
+.footer-link > ul >li {
+  padding: 5px 20px;
+}
+.footer-link>ul>li>a:hover {
+  color: #675BAC;
+}
+

@@ -1,0 +1,18 @@
+/* This is content section */
+.content {
+  height: 600px;
+  background-image: url('cool-background.png'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.introduction {
+  float: left;
+  margin: 200px 70px 0;
+}
+.intro-header > h1 {
+  color: gold;
+}
+.intro-header > h2 {
+  color: white;
+}

@@ -1,0 +1,43 @@
+/* Apply all the elements to color white for dark theme */
+* {
+  color: white;
+}
+/* Initial background color to black */
+html {
+  background: rgb(28, 40, 45);
+  width: 100%;
+}
+/* Cssing the header (Calculator) */
+.header {
+  text-align: center;
+  font-size: 40px;
+}
+/* Calculator to middle of the page */
+.calculator-content {
+  margin: 30px 400px;
+  
+}
+/* Input style */
+#inputNo {
+  width: 400px;
+  height: 100px;
+  background: black;
+  border: none;
+  font-size: x-large;
+}
+/* buttons contents section */
+
+/* Buttons style */
+.buttons > button, #clearBut {
+  width: 100px;
+  height: 100px;
+  background: black;
+  border: none;
+  border-collapse: collapse;
+}
+.buttons > button:hover, #clearBut:hover {
+  background: rgba(50, 51, 56, 0.8);
+}
+.button0 {
+  width: 200px;
+}

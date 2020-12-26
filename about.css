@@ -1,0 +1,17 @@
+* {
+  color: #ccc;
+}
+.content {
+  background: #3d3d3e url('cool-background.png') no-repeat fixed;
+  background-size: cover;
+  height: auto;
+  padding: 20px 70px 20px;
+}
+.content > h1 {
+text-align: center;  
+  padding: 30px 0 20px;
+  color: goldenrod;
+}
+.content > p {
+  text-align: justify;
+}

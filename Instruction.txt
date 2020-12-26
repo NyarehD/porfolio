@@ -1,0 +1,10 @@
+header
+	logo
+	nav bar
+content 
+	Introduction ("Hi I am Nyareh")
+	some background photoes
+footer
+	Social Media
+	
+	
