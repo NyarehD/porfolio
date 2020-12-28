@@ -1,43 +1,79 @@
-/* Apply all the elements to color white for dark theme */
 * {
-  color: white;
+  font-size: 40px;
+  font-family: 'Aldrich';
 }
-/* Initial background color to black */
+/* for darkking the backgroung */
 html {
-  background: rgb(28, 40, 45);
-  width: 100%;
+  background: rgb(51, 51, 51);
 }
-/* Cssing the header (Calculator) */
+/* for header section, for centering the header and */
 .header {
   text-align: center;
-  font-size: 40px;
+  margin: 0 auto;
+  color: rgb(219, 177, 71);
 }
-/* Calculator to middle of the page */
-.calculator-content {
-  margin: 30px 400px;
-  
-}
-/* Input style */
+
+/* Inputing number to grey an */
 #inputNo {
   width: 400px;
-  height: 100px;
-  background: black;
+  height:100px;
+  background: rgba(184, 184, 184, 0);
   border: none;
-  font-size: x-large;
+  text-align: right;
 }
-/* buttons contents section */
-
-/* Buttons style */
-.buttons > button, #clearBut {
-  width: 100px;
-  height: 100px;
-  background: black;
-  border: none;
-  border-collapse: collapse;
+/* Trying to center the content of the calcualtor but not working */
+.calculator-content {
+  margin: 0  auto;
+  position: absolute;
+  left: auto;
+  right: 500px;
+  margin: 20px;
 }
-.buttons > button:hover, #clearBut:hover {
-  background: rgba(50, 51, 56, 0.8);
-}
+/* double the width of the button 0 */
 .button0 {
   width: 200px;
 }
+/* Making all the buttons to standard buttons */
+.buttons > button {
+  width: 100px;
+  height: 100px;
+  border: 0 solid black;
+  margin-right: -12px;
+  padding: 0;
+}
+.default-ultity-color, .buttons > button {
+  background-color: rgba(165, 165, 165, 0);
+}
+/* Making the buttons hover effect */
+.button0:hover, .buttons > button:hover {
+  background-color: rgba(165, 165, 165, 0.3); 
+}
+.button0:after, .buttons > button:active {
+  font-size: 95%;
+  height: 95px;
+}
+
+#button0 {
+  width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Calculator</title>
-	<link href="calculator.css" rel="stylesheet">
+  <link href="calculator.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+
 	<script src="calculator.js"></script>
   </head>
   <body>
@@ -13,9 +15,10 @@
     <input id="inputNo" disabled>
     <br>
     <div class="buttons">
-      <button id="clearBut" onclick="cls()">C</button>
+      <button class="default-ultity-color" onclick="cls()">AC</button>
+      <button class="default-ultity-color" onclick="clsLast()">c</button>
       <button onclick="addINput('/')">D</button>
-      <button onclick="addINput('*')">x</button>
+      <button onclick="addINput('*')">X</button>
       <br>
       <button onclick="addINput(7)">7</button>
       <button onclick="addINput(8)">8</button>
@@ -30,12 +33,12 @@
       <button onclick="addINput(1)">1</button>
       <button onclick="addINput(2)">2</button>
       <button onclick="addINput(3)">3</button>
-      <button onclick="calculating()">=</button>
+      <button onclick="calculating()" id="calculate">=</button>
       <br>
-      <button onclick="addINput(0)">0</button>   
+      <button onclick="addINput(0)" id="button0" class="default-ultity-color">0</button>   
       <button onclick="addINput('.')">.</button> 
       <br>
     </div>
-	</div>
+  </div>
   </body>
 </html>
