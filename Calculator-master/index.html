@@ -15,29 +15,36 @@
     <input id="inputNo" disabled>
     <br>
     <div class="buttons">
-      <button class="default-ultity-color" onclick="cls()">AC</button>
-      <button class="default-ultity-color" onclick="clsLast()">c</button>
-      <button onclick="addINput('/')">D</button>
-      <button onclick="addINput('*')">X</button>
-      <br>
-      <button onclick="addINput(7)">7</button>
-      <button onclick="addINput(8)">8</button>
-      <button onclick="addINput(9)">9</button>
-      <button onclick="addINput('-')">-</button>
-      <br>
-      <button onclick="addINput(4)">4</button>
-      <button onclick="addINput(5)">5</button>
-      <button onclick="addINput(6)">6</button>
-      <button onclick="addINput('+')">+</button>
-      <br>
-      <button onclick="addINput(1)">1</button>
-      <button onclick="addINput(2)">2</button>
-      <button onclick="addINput(3)">3</button>
-      <button onclick="calculating()" id="calculate">=</button>
-      <br>
-      <button onclick="addINput(0)" id="button0" class="default-ultity-color">0</button>   
-      <button onclick="addINput('.')">.</button> 
-      <br>
+      <table>
+        <tr>
+          <td><button class="default-ultity-color" onclick="cls()">AC</button></td>
+          <td><button class="default-ultity-color" onclick="clsLast()">c</button></td>
+          <td><button onclick="addINput('/')">&divide;</button></td>
+          <td><button onclick="addINput('*')">&times;</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="addINput('9')">9</button></td>
+          <td><button onclick="addINput('8')">8</button></td>
+          <td><button onclick="addINput('7')">7</button></td>
+          <td><button onclick="addINput('+')">&plus;</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="addINput('6')">6</button></td>
+          <td><button onclick="addINput('5')">5</button></td>
+          <td><button onclick="addINput('4')">4</button></td>
+          <td><button onclick="addINput('-')">&minus;</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="addINput('3')">3</button></td>
+          <td><button onclick="addINput('2')">2</button></td>
+          <td><button onclick="addINput('1')">1</button></td>
+          <td><button onclick="addINput('=')">=</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="addINput('0')">0</button></td>
+          <td><button onclick="addINput('.')">.</button></td>
+        </tr>
+      </table>
     </div>
   </div>
   </body>

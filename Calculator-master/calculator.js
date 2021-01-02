@@ -11,5 +11,10 @@ function calculating(){
   document.getElementById('inputNo').value=eval(document.getElementById('inputNo').value);
 };
 function clsLast() {
- alert("This key doesn't work but I am working on this.");
+ var inputToArray = document.getElementById("inputNo").value;
+ inputToArray.split("");
+ console.log(inputToArray);
+/* inputToArray.pop();
+ inputToArray.toString();
+ document.getElementById("inputNo").value = inputToArray;*/
 }
