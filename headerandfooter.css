@@ -12,7 +12,7 @@ a{
 a:hover{
   color: #675BAC;
 }
-.header{
+header{
 height: 100px;
 background-color: black;
 }
@@ -76,13 +76,38 @@ footer {
 }
 
 @media only screen and (min-width: 800px){
+  header{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
   .header-title{
     padding: 30px 70px;
   }
   #open-menu, #close-menu{
     margin: 30px 50px;
+    display: none;
   }
   .footer-link{
     margin: 10px 50px;
+  }
+  #sideNav {
+    display: block;
+    height: 100px;
+    width: auto;
+    background: none;
+    float: right;
+    padding: 30px 50px;
+    position: relative;
+  }
+  .sideNav-content{
+    padding-top: 0;
+    padding-left: 0;
+    float: right;
+
+  }
+  .sideNav-content a{
+    display: inline;
+    margin: 0 10px;
   }
 }
