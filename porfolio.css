@@ -5,14 +5,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  pointer-events: none;
 }
 .introduction {
   float: left;
-  margin: 200px 70px 0;
+  margin: 200px 40px 0;
 }
 .intro-header > h1 {
   color: gold;
 }
 .intro-header > h2 {
   color: white;
+}
+@media only screen and (min-width: 800px){
+  .introduction{
+    margin: 200px 70px 0;
+  }
 }
