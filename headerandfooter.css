@@ -2,15 +2,15 @@
   font-family: 'Aldrich';
   margin: 0;
   box-sizing: border-box;
-  color: white;
+  color: whitesmoke;
   text-decoration: none;
   
 }
 a{
-  color: ghostwhite;
+  color: whitesmoke;
 }
 a:hover{
-  color: #675BAC;
+  color: #51478d;
 }
 header{
 height: 100px;
@@ -75,7 +75,7 @@ footer {
   padding: 10px 20px;
 }
 
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 750px){
   header{
     position: sticky;
     position: -webkit-sticky;
@@ -97,11 +97,11 @@ footer {
     width: auto;
     background: none;
     float: right;
-    padding: 30px 50px;
+    padding: 32px 50px;
     position: relative;
   }
   .sideNav-content{
-    padding-top: 0;
+    padding-top: 5px;
     padding-left: 0;
     float: right;
 
