@@ -15,10 +15,12 @@ a:hover{
 header{
 height: 100px;
 background-color: black;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 25px;
 }
 .header-title{
-  padding: 30px 40px;
-  float: left;
   color: goldenrod;
   pointer-events: none;
 }
@@ -33,12 +35,14 @@ background-color: black;
 } */
 #open-menu, #close-menu{
   font-size: 30px;
-  float: right;
-  margin: 30px 40px;
   transition: 0.7s;
 }
 #close-menu{
   display: none;
+  margin: 40px 25px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
 }
 #open-menu:hover, #close-menu:hover{
   cursor: pointer;
@@ -49,13 +53,18 @@ background-color: black;
   position: fixed;
   width: 0;
   height: 100%;
-  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.877);
   transition: 0.7s;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 .sideNav-content {
-  padding-top: 300px;
-  padding-left: 35%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
 }
 .sideNav-content a {
   text-decoration: none;
@@ -75,17 +84,17 @@ footer {
   padding: 10px 20px;
 }
 
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 760px){
   header{
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    flex-flow: row nowrap;
+    padding: 15px 50px;
   }
   .header-title{
-    padding: 30px 70px;
   }
   #open-menu, #close-menu{
-    margin: 30px 50px;
     display: none;
   }
   .footer-link{
@@ -93,21 +102,33 @@ footer {
   }
   #sideNav {
     display: block;
-    height: 100px;
     width: auto;
     background: none;
     float: right;
-    padding: 30px 50px;
     position: relative;
+    padding: 20px 0 20px 20px;
+    justify-self: flex-end;
   }
   .sideNav-content{
     padding-top: 0;
     padding-left: 0;
     float: right;
-
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
   .sideNav-content a{
     display: inline;
     margin: 0 10px;
+  }
+}
+@media only screen and (min-width: 1200px){
+  header{
+    padding: 25px 70px;
+    height: 120px;
+  }
+  footer{
+    height: 160px;
+    padding: 10px 70px;
   }
 }
