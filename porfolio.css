@@ -6,10 +6,14 @@
   background-size: cover;
   background-attachment: scroll;
   pointer-events: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 .introduction {
   float: left;
-  margin: 200px 40px 0;
+  padding: 25px;
 }
 .intro-header > h1 {
   color: gold;
