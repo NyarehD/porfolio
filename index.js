@@ -9,3 +9,9 @@ function closeMenu(){
     document.getElementById("close-menu").style.display = "none";
     document.getElementById("sideNav").style.width = "0";
 }
+function checkLink(){
+    var location = location.toString();
+    var currentLink = location.split("/");
+    currentLink[currentLink.length-1];  
+
+}
