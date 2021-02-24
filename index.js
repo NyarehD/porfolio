@@ -10,8 +10,11 @@ function closeMenu(){
     document.getElementById("sideNav").style.width = "0";
 }
 function checkLink(){
-    var location = location.toString();
-    var currentLink = location.split("/");
-    currentLink[currentLink.length-1];  
-
+    var link = document.querySelectorAll('a');
+    var href = {};
+    for(var i = 0; i<link.length; i++){
+        href[i].push(link[i]);
+    };
+    
+    console.log(href);
 }

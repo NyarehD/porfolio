@@ -1,19 +1,18 @@
 /* This is content section */
 .content {
-  height: 600px;
-  background-image: url('cool-background.png'); 
-  background-repeat: no-repeat;
+  
+}
+.introduction {
+  height: 80vh;
+  width: 100%;
+  background: url('cool-background.png') no-repeat fixed; 
   background-size: cover;
-  background-attachment: scroll;
   pointer-events: none;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  align-items: baseline;
-}
-.introduction {
-  float: left;
-  padding: 25px;
+  align-items: center;
+  padding: 0 0 0 25px;
 }
 .intro-header > h1 {
   color: gold;
@@ -21,11 +20,14 @@
 .intro-header > h2 {
   color: white;
 }
-@media only screen and (min-width: 750px){
+@media only screen and (min-width: 760px){
+  .content{
+
+  }
   .introduction{
-    margin: 200px 70px 0;
+    padding: 0 0 0 70px;
   }
-  .content {
-    background-attachment: fixed;
-  }
+}
+@media only screen and (min-width: 1200px){
+  
 }
