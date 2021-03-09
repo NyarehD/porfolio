@@ -8,6 +8,7 @@ body{
   margin: 0;
   padding: 0;
   background-color: black;
+  scrollbar-width: 0;
 }
 a{
   color: rgb(206, 206, 206);
