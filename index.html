@@ -4,13 +4,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<title>Portfolio</title>
-		<link rel="stylesheet" href="/CSS/headerandfooter.css">
-		<link rel="stylesheet" href="/CSS/porfolio.css">
-		<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>		
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /></head>
+		<link rel="stylesheet" href="CSS/headerandfooter.css">
+		<link rel="stylesheet" href="CSS/porfolio.css">
+		<link rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+	</head>
 <body onload="checkLink()">
 	<header>	
-		<img src="/ASSETS/2Artboard 1@3x - Copy.png" alt="Some" class="header-title">
+		<img src="ASSETS/2Artboard 1@3x - Copy.png" alt="Some" class="header-title">
 		<span class="fas fa-bars" id="open-menu" onclick="showMenu()"></span>
 		<div id="sideNav">
 			<span class="fas fa-times" id="close-menu" onclick="closeMenu()"></span>
@@ -30,18 +31,18 @@
 			</div>
 		</div>
 		<div class="projects">
-			<img src="/ASSETS/nyareh.svg" style="width: 500px;" alt="">
 		</div>
 	</div>	
 	<footer>
 		<div class="footer-link">
-			<ul type="none">
-				<li><i class="fab fa-facebook" style="color:whitesmoke"></i>&nbsp;&nbsp;<a href="https://www.facebook.com/nyareh.david.9">Facebook</a></li>
-				<li><i class="fab fa-twitter" style="color:whitesmoke"></i>&nbsp;&nbsp;<a href="https://twitter.com/NyarehD">Twitter</a></li>
-				<li><i class="fab fa-github" style="color:whitesmoke"></i>&nbsp;&nbsp;<a href="https://github.com/NyarehD">Github</a></li>
+			<ul>
+				<li><img src="ASSETS/facebook-f-brands.svg" class="facebook"><a href="https://www.facebook.com/nyarehd">Facebook</a></li>
+				<li><img src="ASSETS/twitter-brands.svg" class="twitter"><a href="https://twitter.com/NyarehD">Twitter</a></li>
+				<li><img src="ASSETS/github-brands.svg" class="github"><a href="https://github.com/NyarehD">Github</a></li>
 			</ul>
 		</div>
 	</footer>
+	<script src="/vendor/js/bootstrap.min.js"></script>
 	<script src="JS/index.js"></script>
 </body>
 </html>

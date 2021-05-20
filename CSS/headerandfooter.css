@@ -1,14 +1,16 @@
 * {
-  font-family: 'Aldrich'; 
+  font-family: 'Aldrich', sans-serif;
   box-sizing: border-box;
   color: rgb(230, 214, 214);
   text-decoration: none;
+}
+html{
+  height: auto;
 }
 body{
   margin: 0;
   padding: 0;
   background-color: black;
-  scrollbar-width: 0;
 }
 a{
   color: rgb(206, 206, 206);
@@ -39,8 +41,8 @@ padding: 25px;
   display: none;
   margin: 40px 25px;
   position: fixed;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
 }
 #open-menu:hover, #close-menu:hover{
   cursor: pointer;
@@ -70,18 +72,40 @@ padding: 25px;
   display: block;
   font-size: x-large;
 }
+.sideNav-content a:hover{
+  color: #e58407;
+}
 footer {
   height: auto;
-  background-color: black;  
+  background-color: black;
 }
 .footer-link {
   float: right;
-  margin: 10px 15px;
 }
 .footer-link > ul >li {
-  padding: 10px 20px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
-
+.footer-link > ul > li > a:hover{
+  color: #e58407;
+}
+.facebook{
+  width: 10px;
+}
+.twitter{
+  width: 15px;
+}
+.github{
+  width: 17px;
+}
+.facebook, .twitter, .github{
+  margin-right: 10px;
+}
+ul{
+  list-style-type: none;
+}
 @media only screen and (min-width: 760px){
   header{
     position: sticky;

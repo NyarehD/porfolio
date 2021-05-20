@@ -1,8 +1,8 @@
+*{
+  font-family: 'Aldrich', sans-serif;
+}
 
 /* This is content section */
-.content {
-  
-}
 .introduction {
   height: 80vh;
   width: 100%;
@@ -21,10 +21,8 @@
 .intro-header > h2 {
   color: white;
 }
-@media only screen and (min-width: 760px){
-  .content{
 
-  }
+@media only screen and (min-width: 760px){
   .introduction{
     padding: 0 0 0 70px;
   }
