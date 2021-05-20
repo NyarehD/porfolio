@@ -14,7 +14,7 @@ function checkLink(){
     var href = {};
     for(var i = 0; i<link.length; i++){
         href[i].push(link[i]);
-    };
+    }
     
     console.log(href);
 }
