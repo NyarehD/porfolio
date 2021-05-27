@@ -1,42 +1,14 @@
-/* *{
+*{
   font-family: 'Aldrich', sans-serif;
-}
-
-/* This is content section */
-/*
-.introduction {
-  height: 80vh;
-  width: 100%;
-  background: url('Background/cool-background.png') no-repeat fixed; 
-  background-size: cover;
-  pointer-events: none;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0 0 0 25px;
-}
-.intro-header > h1 {
-  color: #ffd700;
-}
-.intro-header > h2 {
-  color: white;
-}
-
-@media only screen and (min-width: 760px){
-  .introduction{
-    padding: 0 0 0 70px;
-  }
-}
-@media only screen and (min-width: 1200px){
-  
-} */
-* {
   padding: 0;
   margin: 0;
 }
+
 html{
   overflow-x: hidden;
+}
+.navbar-brand{
+  color: goldenrod !important;
 }
 .background {
   background-image: url("/ASSETS/cool-background.png");
@@ -46,12 +18,21 @@ html{
   background-attachment: fixed;
 }
 .text{
-  font-size: 2.5em;
   color: rgb(196, 196, 196);
+  font-size: 1.3rem;
 }
 .text-hightlight{
+  font-size: 2.5em;
   color: goldenrod;
 }
+/*  for sm */
 @media screen and (max-width: 570px) {
-
+  .greeting{
+    width: 100%;
+    height: 100px;
+    align-self: center;
+  }
+  .text, .text-hightlight{
+    text-align: center;
+  }
 }
