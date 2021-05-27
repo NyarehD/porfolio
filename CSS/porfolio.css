@@ -31,14 +31,27 @@
 @media only screen and (min-width: 1200px){
   
 } */
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        .background {
-            background-image: url("/ASSETS/cool-background.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+* {
+  padding: 0;
+  margin: 0;
+}
+html{
+  overflow-x: hidden;
+}
+.background {
+  background-image: url("/ASSETS/cool-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.text{
+  font-size: 2.5em;
+  color: rgb(196, 196, 196);
+}
+.text-hightlight{
+  color: goldenrod;
+}
+@media screen and (max-width: 570px) {
+
+}
