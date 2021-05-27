@@ -1,8 +1,9 @@
-*{
+/* *{
   font-family: 'Aldrich', sans-serif;
 }
 
 /* This is content section */
+/*
 .introduction {
   height: 80vh;
   width: 100%;
@@ -29,4 +30,15 @@
 }
 @media only screen and (min-width: 1200px){
   
-}
+} */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .background {
+            background-image: url("/ASSETS/cool-background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
