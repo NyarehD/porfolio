@@ -25,6 +25,11 @@ html{
   font-size: 2.5em;
   color: goldenrod;
 }
+.profile{
+  width: 400px;
+}
+#navbarContents{
+}
 /*  for sm */
 @media screen and (max-width: 570px) {
   .greeting{
@@ -34,5 +39,9 @@ html{
   }
   .text, .text-hightlight{
     text-align: center;
+  }
+  #navbarContents{
+    position: absolute;
+    top: 100%;
   }
 }
