@@ -3,8 +3,9 @@ $(document).ready(function () {
     secondDiv.toggle();
     secondDiv.waypoint(function (direction) {
         secondDiv.toggle();
+        secondDiv.children("div").addClass("animate__animated animate__bounceIn");
     }, {
-        offset: "-100%"
+        offset: "-98%"
     })
 
 })

@@ -45,3 +45,16 @@ html{
     top: 100%;
   }
 }
+.showNavBar{
+}
+@keyframes showNavBarAnimation {
+  from {
+    opacity: 0;
+  }to{
+       opacity: 100%;
+     }
+}
+.animate__animated.animate__bounce{
+  animation-delay: 0s;
+  animation-duration: 100ms;
+}
