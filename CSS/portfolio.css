@@ -30,6 +30,10 @@ html{
 }
 #navbarContents{
 }
+#thirdDiv{
+  margin-top: 50px;
+}
+
 /*  for sm */
 @media screen and (max-width: 570px) {
   .greeting{
@@ -54,7 +58,7 @@ html{
        opacity: 100%;
      }
 }
-.animate__animated.animate__bounce{
+.animate__animated.animate__fadeInUp{
   animation-delay: 0s;
-  animation-duration: 100ms;
+  animation-duration: 600ms;
 }
