@@ -4,9 +4,19 @@ $(document).ready(function () {
     secondDiv.waypoint(function (direction) {
         secondDiv.toggleClass("invisible visible");
         secondDiv.children("div").toggleClass("animate__animated animate__fadeInUp");
+        $(`#navbarSecondContents a[href="#projects"`).addClass("active")
     }, {
-        offset: "10"
+        offset: "0"
     })
+    $('#about').waypoint(function (direction) {
+        $(`#navbarSecondContents a[href="#projects"]`).toggleClass('active')
+        $(`#navbarSecondContents a[href="#about"]`).toggleClass('active')
+        console.log($("#about").offset());
+
+    },{
+        offset: '10'
+    })
+
     // $(".project-card").on({
     //     mouseenter: function () {
     //         $('.project-card').css("background-color", "rgba(95, 95, 95, 0.342)");
