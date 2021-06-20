@@ -17,9 +17,9 @@
 
 <body class="col-12 bg-dark p-0 container-fluid ">
   <section class="container-fluid px-0 position-relative">
-    <!-- Navigation section at welcome page (Not Sticky) -->
+    <!-- Navigation section at welcome page (Fixed) -->
     <div class="container-fluid background" id="home">
-      <div class="container-fluid">
+      <div class="container-fluid row" id="nav">
         <div class="row justify-content-center bg-transparent">
           <nav class="navbar navbar-expand-lg navbar-dark bg-transparent navbar-expand-sm px-5 col-lg-10 col-md-11">
             <a class="navbar-brand" href="#">NyarehD</a>
@@ -59,38 +59,50 @@
       </div>
     </div>
     <!-- End of First div -->
-    <!-- Second Div for other navbar which appears after scrolling reaches the projects section -->
-    <div class="container-fluid sticky-top bg-dark" id="secondDiv">
-      <div class="container-fluid">
-        <div class="row justify-content-center" id="secondDivNav">
-          <nav class="navbar navbar-expand-lg navbar-dark bg-transparent navbar-expand-sm px-5 col-lg-10 col-md-11">
-            <a class="navbar-brand" href="#">NyarehD</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSecondContents" aria-controls="navbarScroll" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end col-md-8" id="navbarSecondContents">
-              <ul class="navbar-nav nav">
-                <li class="nav-item mx-md-3 seondNavLink">
-                  <a class="nav-link home" href="#home">Home </a>
-                </li>
-                <li class="nav-item mx-md-3 secondNavLink">
-                  <a class="nav-link projects" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item mx-md-3 secondNavLink">
-                  <a href="#about" class="nav-link about">About</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+    <!--    &lt;!&ndash; Second Div for other navbar which appears after scrolling reaches the projects section &ndash;&gt;-->
+    <!--    <div class="container-fluid sticky-top bg-dark" id="secondDiv">-->
+    <!--      <div class="container-fluid">-->
+    <!--        <div class="row justify-content-center" id="secondDivNav">-->
+    <!--          <nav class="navbar navbar-expand-lg navbar-dark bg-transparent navbar-expand-sm px-5 col-lg-10 col-md-11">-->
+    <!--            <a class="navbar-brand" href="#">NyarehD</a>-->
+    <!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"-->
+    <!--              data-bs-target="#navbarSecondContents" aria-controls="navbarScroll" aria-expanded="false"-->
+    <!--              aria-label="Toggle navigation">-->
+    <!--              <span class="navbar-toggler-icon"></span>-->
+    <!--            </button>-->
+    <!--            <div class="collapse navbar-collapse justify-content-end col-md-8" id="navbarSecondContents">-->
+    <!--              <ul class="navbar-nav nav">-->
+    <!--                <li class="nav-item mx-md-3 seondNavLink">-->
+    <!--                  <a class="nav-link home" href="#home">Home </a>-->
+    <!--                </li>-->
+    <!--                <li class="nav-item mx-md-3 secondNavLink">-->
+    <!--                  <a class="nav-link projects" href="#projects">Projects</a>-->
+    <!--                </li>-->
+    <!--                <li class="nav-item mx-md-3 secondNavLink">-->
+    <!--                  <a href="#about" class="nav-link about">About</a>-->
+    <!--                </li>-->
+    <!--              </ul>-->
+    <!--            </div>-->
+    <!--          </nav>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--    &lt;!&ndash; End of Second Div &ndash;&gt;-->
+    <!--Second div Start-->
+    <div class="bg-dark container-fluid row" id="paths">
+      <div class="container-fluid row justify-content-center min-vh-100 align-items-center">
+        <div class="col-12">
+          <p class="hightlight-text">My Web Journey</p>
         </div>
+
       </div>
     </div>
-    <!-- End of Second Div -->
+
+
+    <!--Second div end-->
     <!-- Start of third div or projects -->
-    <div class="min-vh-100 bg-dark container-fluid" id="projects">
-      <div class="container-fluid row justify-content-center">
+    <div class="bg-dark container-fluid" id="projects">
+      <div class="container-fluid row justify-content-center min-vh-100 align-items-center">
         <div class="col-md-3">
           <figure class="imghvr-fade">
             <img src="ASSETS/cropped snake.png" alt="example-image">

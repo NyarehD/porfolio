@@ -5,11 +5,7 @@
   font-family: 'Aldrich', sans-serif;
   padding: 0;
   margin: 0;
-}
-
-
-
-
+} 
 html{
   overflow-x: hidden;
   background: #3d3d3db9;
@@ -18,8 +14,14 @@ body{
   scrollbar-color: black;
 
 }
+#nav{
+  z-index: 100;
+}
 .navbar-brand{
-  color: goldenrod !important;
+  color: #daa520 !important;
+}
+.hightlight-text{
+  color: #daa520;
 }
 .background {
   background-image: url("/ASSETS/cool-background.png");
@@ -50,7 +52,7 @@ body{
 
 /* Thrid Div */
 #projects{
-  padding-top: 70px;
+padding-top: 90px;
 }
 
 /* Thrid Div */
