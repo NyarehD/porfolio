@@ -1,8 +1,12 @@
 :root{
   --transparacy-for-me: rgba(95, 95, 95, 0.342);
+  --golden: #daa520;
+  --t-second: #939597;
+  --t-active: #e6e6e6;
 }
 *{
   font-family: 'Aldrich', sans-serif;
+  color: #fff;
 } 
 html{
   overflow-x: hidden;
@@ -21,13 +25,7 @@ body{
 .hightlight-text{
   color: #daa520;
 }
-.background {
-  background-image: url("/ASSETS/cool-background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
+
 .text{
   color: rgb(196, 196, 196);
   font-size: 1.3rem;
@@ -95,15 +93,40 @@ figcaption a img{
 
 
 
+/* Header */
+
+
+.background {
+  background-image: url("/ASSETS/cool-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Header > navbar */
+.active{
+  color: var(--t-active) !important;
+}
+.navbar-brand{
+  font-size: 1.8rem;
+}
+.nav-link{
+  font-size: 1.2rem;
+}
+
 
 /* First Div */
 
 .f-large{
-  font-size: 8rem;
+  font-size: 6rem;
 }
 .f-medium{
-  font-size: 5rem;
+  font-size: 3rem;
 }
 .f-small{
   font-size: 2rem;
+}
+.f-xsmall{
+  font-size: 1.4rem;
 }
