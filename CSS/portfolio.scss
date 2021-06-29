@@ -1,5 +1,19 @@
+$transparency-for-me: rgba(95, 95, 95, 0.342);
+$golden: #daa520;
+$t-second: #bababa;
+$t-active: #e6e6e6;
+$t-third: #ddd;
+$t-shadow: 0 1px 2px #1a1e21;
+
 /* Colors */
+$blacky: #1a2238;
+$purple-light: #9daaf2;
+$orangy: #ff6a3d;
+$sandy: #f4db7d;
+
 /* padding for content not to be covered with navbar */
+$p-for-not-nav: 200px;
+
 /* Universal Class */
 .f-large {
   font-size: 6rem;
@@ -18,7 +32,7 @@
 }
 
 * {
-  font-family: "Aldrich", sans-serif;
+  font-family: 'Aldrich', sans-serif;
   color: #fff;
 }
 
@@ -32,6 +46,7 @@ body {
   background-color: #1a2238;
 }
 
+
 .profile {
   width: 400px;
 }
@@ -40,7 +55,12 @@ body {
   visibility: hidden;
 }
 
+#navbarContents {
+}
+
 /* Second Div */
+
+
 /* Third Div */
 #projects {
   padding-top: 90px;
@@ -67,16 +87,18 @@ figcaption a img {
     height: 100px;
     align-self: center;
   }
-
   .text, .text-hightlight {
     text-align: center;
   }
-
   #navbarContents {
     position: absolute;
     top: 100%;
   }
 }
+
+.showNavBar {
+}
+
 @keyframes showNavBarAnimation {
   from {
     opacity: 0;
@@ -85,26 +107,32 @@ figcaption a img {
     opacity: 100%;
   }
 }
+
 .animate__animated.animate__bounce {
   animation-delay: 0s;
   animation-duration: 100ms;
 }
 
+
 /* Header */
-#header a.navbar-brand {
-  color: #f4db7d;
-}
-#header nav {
-  /* Header > navbar */
-}
-#header nav .active {
-  color: var(--t-active) !important;
-}
-#header nav .navbar-brand {
-  font-size: 1.8rem;
-}
-#header nav .nav-link {
-  font-size: 1.2rem;
+#header {
+  a.navbar-brand {
+    color: $sandy;
+  }
+  nav{
+    /* Header > navbar */
+    .active {
+      color: var(--t-active) !important;
+    }
+
+    .navbar-brand {
+      font-size: 1.8rem;
+    }
+
+    .nav-link {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 .background {
@@ -115,19 +143,27 @@ figcaption a img {
   background-attachment: fixed;
 }
 
+
 /* Header welcome */
 #welcome {
   /* Text Section */
-}
-#welcome p.f-small {
-  color: #bababa;
-}
-#welcome p.f-large span {
-  color: #f4db7d;
-}
-#welcome p.f-medium {
-  color: #ddd;
-  text-shadow: 0 1px 2px #1a1e21;
+  p.f-small {
+    color: $t-second;
+  }
+
+  p.f-large {
+    span {
+      color: $sandy;
+    }
+  }
+
+  p.f-medium {
+    color: $t-third;
+
+    text-shadow: $t-shadow;
+  }
 }
 
-/*# sourceMappingURL=portfolio.css.map */
+
+
+
