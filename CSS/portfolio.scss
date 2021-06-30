@@ -10,6 +10,7 @@ $blacky: #1a2238;
 $purple-light: #9daaf2;
 $orangy: #ff6a3d;
 $sandy: #f4db7d;
+$primary-bg-color: #1a2238;
 
 /* padding for content not to be covered with navbar */
 $p-for-not-nav: 200px;
@@ -30,10 +31,12 @@ $p-for-not-nav: 200px;
 .f-xsmall {
   font-size: 1.4rem;
 }
-.isolate{
+
+.isolate {
   isolation: isolate;
 }
-.mix-blend-multiply{
+
+.mix-blend-multiply {
   mix-blend-mode: difference;
 }
 
@@ -49,7 +52,6 @@ html {
 
 body {
   scrollbar-color: black;
-  background-color: #1a2238;
 }
 
 
@@ -125,7 +127,8 @@ figcaption a img {
   a.navbar-brand {
     color: $sandy;
   }
-  nav{
+
+  nav {
     /* Header > navbar */
     .active {
       color: var(--t-active) !important;
@@ -169,15 +172,41 @@ figcaption a img {
 }
 
 // Path
-#path{
-
+#path {
+  background-color: $primary-bg-color;
 
   // Road map img
-  .roadmap-lg{
+  .roadmap-lg {
   }
-  .roadmap-sm{
+
+  .roadmap-sm {
 
   }
 }
 
+// Projects
+#projects {
+  background-color: #b02a37;
+  div.row.mb-3 {
+    p.f-medium {
+      color: $blacky;
+    }
+
+    p.f-xsmall {
+      color: $orangy;
+      position: relative;
+    }
+
+    p.f-xsmall::after {
+      mix-blend-mode: multiply;
+
+    }
+
+
+  }
+
+  div.card {
+    background-color: #3f3d56;
+  }
+}
 

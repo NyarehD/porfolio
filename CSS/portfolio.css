@@ -37,7 +37,6 @@ html {
 
 body {
   scrollbar-color: black;
-  background-color: #1a2238;
 }
 
 .profile {
@@ -135,6 +134,26 @@ figcaption a img {
 }
 #welcome p.f-medium {
   color: white;
+}
+
+#path {
+  background-color: #1a2238;
+}
+#projects {
+  background-color: #b02a37;
+}
+#projects div.row.mb-3 p.f-medium {
+  color: #1a2238;
+}
+#projects div.row.mb-3 p.f-xsmall {
+  color: #ff6a3d;
+  position: relative;
+}
+#projects div.row.mb-3 p.f-xsmall::after {
+  mix-blend-mode: multiply;
+}
+#projects div.card {
+  background-color: #3f3d56;
 }
 
 /*# sourceMappingURL=portfolio.css.map */
