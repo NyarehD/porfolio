@@ -30,6 +30,12 @@ $p-for-not-nav: 200px;
 .f-xsmall {
   font-size: 1.4rem;
 }
+.isolate{
+  isolation: isolate;
+}
+.mix-blend-multiply{
+  mix-blend-mode: difference;
+}
 
 * {
   font-family: 'Aldrich', sans-serif;
@@ -158,12 +164,20 @@ figcaption a img {
   }
 
   p.f-medium {
-    color: $t-third;
-
-    text-shadow: $t-shadow;
+    color: white;
   }
 }
 
+// Path
+#path{
 
+
+  // Road map img
+  .roadmap-lg{
+  }
+  .roadmap-sm{
+
+  }
+}
 
 
