@@ -133,27 +133,39 @@ figcaption a img {
   color: #f4db7d;
 }
 #welcome p.f-medium {
-  color: white;
+  color: #9daaf2;
+  mix-blend-mode: difference;
+}
+#welcome p.f-medium span {
+  color: #ff6a3d;
+  mix-blend-mode: difference;
 }
 
 #path {
   background-color: #1a2238;
 }
 #projects {
-  background-color: #b02a37;
+  isolation: isolate;
+  background-color: #fffffa;
 }
 #projects div.row.mb-3 p.f-medium {
-  color: #1a2238;
+  color: #ff6a3d;
 }
 #projects div.row.mb-3 p.f-xsmall {
-  color: #ff6a3d;
-  position: relative;
-}
-#projects div.row.mb-3 p.f-xsmall::after {
-  mix-blend-mode: multiply;
+  color: #29375b;
 }
 #projects div.card {
-  background-color: #3f3d56;
+  background-color: transparent;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
+}
+#projects div.card div.card-body .card-title {
+  color: #1a2238;
+}
+#projects div.card div.card-body .card-text {
+  color: #29375b;
+}
+#projects div.card div.card-body .frameworkList small, #projects div.card div.card-body .languageList small {
+  color: #ff6a3d !important;
 }
 
 /*# sourceMappingURL=portfolio.css.map */

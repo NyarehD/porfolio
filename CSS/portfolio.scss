@@ -4,16 +4,19 @@ $t-second: #bababa;
 $t-active: #e6e6e6;
 $t-third: #ddd;
 $t-shadow: 0 1px 2px #1a1e21;
+$b-shadow: 0 1rem 2rem rgba(0,0,0,.18);
 
 /* Colors */
-$blacky: #1a2238;
+$midnight: #1a2238;
+$twilight: #29375b;
 $purple-light: #9daaf2;
+$purple-dark: #838ecf;
 $orangy: #ff6a3d;
 $sandy: #f4db7d;
 $primary-bg-color: #1a2238;
 
 /* padding for content not to be covered with navbar */
-$p-for-not-nav: 200px;
+$p-for-not-nav: 70px;
 
 /* Universal Class */
 .f-large {
@@ -167,7 +170,12 @@ figcaption a img {
   }
 
   p.f-medium {
-    color: white;
+    color: $purple-light;
+    mix-blend-mode: difference;
+    span{
+      color: $orangy;
+      mix-blend-mode: difference;
+    }
   }
 }
 
@@ -186,27 +194,37 @@ figcaption a img {
 
 // Projects
 #projects {
-  background-color: #b02a37;
+  isolation: isolate;
+  background-color:#fffffa;
   div.row.mb-3 {
     p.f-medium {
-      color: $blacky;
-    }
-
-    p.f-xsmall {
       color: $orangy;
-      position: relative;
     }
 
-    p.f-xsmall::after {
-      mix-blend-mode: multiply;
-
+    p.f-xsmall{
+    color: $twilight;
     }
+
 
 
   }
-
+// project cards
   div.card {
-    background-color: #3f3d56;
+    background-color: transparent;
+    box-shadow: $b-shadow;
+    div.card-body{
+      .card-title{
+        color: $midnight;
+      }
+      .card-text{
+        color: $twilight;
+      }
+      .frameworkList, .languageList{
+        small{
+          color: $orangy !important;
+        }
+      }
+    }
   }
 }
 
