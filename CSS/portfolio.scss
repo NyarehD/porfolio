@@ -192,17 +192,18 @@ figcaption a img {
   }
 }
 
+
 // Projects
 #projects {
   isolation: isolate;
-  background-color:#fffffa;
+background-color: #fffffa;
   div.row.mb-3 {
     p.f-medium {
       color: $orangy;
     }
 
-    p.f-xsmall{
-    color: $twilight;
+    p.f-xsmall {
+      color: $twilight;
     }
 
 
