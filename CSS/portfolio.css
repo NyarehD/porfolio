@@ -21,12 +21,24 @@
   isolation: isolate;
 }
 
-.mix-blend-multiply {
+.mix-blend-difference {
   mix-blend-mode: difference;
 }
 
+.f-midnight {
+  color: #1a2238;
+}
+
+.f-twilight {
+  color: #29375b;
+}
+
+.f-orangy {
+  color: #ff6a3d;
+}
+
 * {
-  font-family: "Aldrich", sans-serif;
+  font-family: "Ubuntu Medium", sans-serif;
   color: #fff;
 }
 
@@ -99,7 +111,7 @@ figcaption a img {
 
 /* Header */
 #header a.navbar-brand {
-  color: #f4db7d;
+  color: #ff6a3d;
 }
 #header nav {
   /* Header > navbar */
@@ -129,20 +141,20 @@ figcaption a img {
 #welcome p.f-small {
   color: #bababa;
 }
-#welcome p.f-large span {
-  color: #f4db7d;
+#welcome p.f-large {
+  color: #9daaf2;
 }
 #welcome p.f-medium {
   color: #9daaf2;
-  mix-blend-mode: difference;
 }
-#welcome p.f-medium span {
-  color: #ff6a3d;
-  mix-blend-mode: difference;
-}
-
 #path {
   background-color: #1a2238;
+}
+#path div.col-12 p.f-medium {
+  color: #f4db7d;
+}
+#path div.col-12 blockquote, #path div.col-12 blockquote + p > em {
+  color: #9daaf2;
 }
 #projects {
   isolation: isolate;
@@ -166,6 +178,27 @@ figcaption a img {
 }
 #projects div.card div.card-body .frameworkList small, #projects div.card div.card-body .languageList small {
   color: #ff6a3d !important;
+}
+
+#about .about-me {
+  height: 60vh;
+}
+#about .profile-img {
+  max-width: 100%;
+}
+
+#contact {
+  height: 50vh;
+  padding: 5rem;
+  background-image: url("/ASSETS/SVG/Asset 1_1.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#contact .contact-icons {
+  height: 30px;
+}
+#contact .social div {
+  vertical-align: text-bottom;
 }
 
 /*# sourceMappingURL=portfolio.css.map */

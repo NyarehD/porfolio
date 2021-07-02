@@ -39,12 +39,22 @@ $p-for-not-nav: 70px;
   isolation: isolate;
 }
 
-.mix-blend-multiply {
+.mix-blend-difference {
   mix-blend-mode: difference;
 }
 
+.f-midnight{
+  color: $midnight;
+}
+.f-twilight{
+  color: $twilight;
+}
+.f-orangy{
+  color: $orangy;
+}
+
 * {
-  font-family: 'Aldrich', sans-serif;
+  font-family: 'Ubuntu Medium', sans-serif;
   color: #fff;
 }
 
@@ -128,7 +138,7 @@ figcaption a img {
 /* Header */
 #header {
   a.navbar-brand {
-    color: $sandy;
+    color: $orangy;
   }
 
   nav {
@@ -159,22 +169,20 @@ figcaption a img {
 /* Header welcome */
 #welcome {
   /* Text Section */
+
   p.f-small {
     color: $t-second;
   }
 
   p.f-large {
+    color: $purple-light;
     span {
-      color: $sandy;
     }
   }
 
   p.f-medium {
     color: $purple-light;
-    mix-blend-mode: difference;
     span{
-      color: $orangy;
-      mix-blend-mode: difference;
     }
   }
 }
@@ -182,6 +190,16 @@ figcaption a img {
 // Path
 #path {
   background-color: $primary-bg-color;
+  div.col-12{
+    p.f-medium{
+      color: $sandy;
+    }
+    blockquote, blockquote+p > em{
+      color: $purple-light;
+    }
+  }
+
+
 
   // Road map img
   .roadmap-lg {
@@ -229,3 +247,31 @@ background-color: #fffffa;
   }
 }
 
+#about{
+  .about-me{
+    height: 60vh;
+  }
+.about-text{
+
+}
+  .about-img{
+
+  }
+  .profile-img{
+    max-width: 100%;
+  }
+}
+#contact{
+  height:50vh;
+  padding: 5rem;
+  background-image: url("/ASSETS/SVG/Asset 1_1.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  .contact-icons{
+    height: 30px;
+  }
+  .social div{
+    vertical-align: text-bottom;
+  }
+
+}
