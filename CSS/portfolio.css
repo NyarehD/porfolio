@@ -51,23 +51,10 @@ body {
   scrollbar-color: black;
 }
 
-.profile {
-  width: 400px;
-}
-
-.visibilityHidden {
-  visibility: hidden;
-}
-
-/* Second Div */
-/* Third Div */
-#projects {
-  padding-top: 90px;
-}
-
 /* Third Div */
 .project-text {
   pointer-events: none;
+  -webkit-transition: 0.1s;
   transition: 0.1s;
 }
 
@@ -79,23 +66,15 @@ figcaption a img {
   width: 20px;
 }
 
-/*  for sm */
-@media screen and (max-width: 570px) {
-  .greeting {
-    width: 100%;
-    height: 100px;
-    align-self: center;
+@-webkit-keyframes showNavBarAnimation {
+  from {
+    opacity: 0;
   }
-
-  .text, .text-hightlight {
-    text-align: center;
-  }
-
-  #navbarContents {
-    position: absolute;
-    top: 100%;
+  to {
+    opacity: 100%;
   }
 }
+
 @keyframes showNavBarAnimation {
   from {
     opacity: 0;
@@ -104,33 +83,33 @@ figcaption a img {
     opacity: 100%;
   }
 }
-.animate__animated.animate__bounce {
-  animation-delay: 0s;
-  animation-duration: 100ms;
-}
 
 /* Header */
-#header a.navbar-brand {
-  color: #ff6a3d;
-}
 #header nav {
   /* Header > navbar */
 }
+
+#header nav .navbar-brand span {
+  color: #ff6a3d;
+}
+
 #header nav .active {
   color: var(--t-active) !important;
 }
+
 #header nav .navbar-brand {
   font-size: 1.8rem;
 }
+
 #header nav .nav-link {
   font-size: 1.2rem;
 }
 
-.background {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+#homeParent {
   background-image: url("/ASSETS/secondbackground.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -138,67 +117,123 @@ figcaption a img {
 #welcome {
   /* Text Section */
 }
-#welcome p.f-small {
-  color: #bababa;
-}
+
 #welcome p.f-large {
   color: #9daaf2;
 }
+
 #welcome p.f-medium {
   color: #9daaf2;
 }
+
 #path {
   background-color: #1a2238;
 }
+
 #path div.col-12 p.f-medium {
   color: #f4db7d;
 }
-#path div.col-12 blockquote, #path div.col-12 blockquote + p > em {
+
+#path div.col-12 blockquote,
+#path div.col-12 blockquote + p > em {
   color: #9daaf2;
 }
+
+.first-wavy {
+  background-image: url("/ASSETS/SVG/wavy-v1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: scroll;
+  height: 100px;
+}
+
 #projects {
   isolation: isolate;
   background-color: #fffffa;
 }
-#projects div.row.mb-3 p.f-medium {
-  color: #ff6a3d;
-}
-#projects div.row.mb-3 p.f-xsmall {
-  color: #29375b;
-}
+
 #projects div.card {
   background-color: transparent;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
 }
+
 #projects div.card div.card-body .card-title {
   color: #1a2238;
 }
+
 #projects div.card div.card-body .card-text {
   color: #29375b;
 }
-#projects div.card div.card-body .frameworkList small, #projects div.card div.card-body .languageList small {
+
+#projects div.card div.card-body .frameworkList small,
+#projects div.card div.card-body .languageList small {
   color: #ff6a3d !important;
+}
+
+.second-wavy {
+  background-image: url("/ASSETS/SVG/wavy2-v1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: scroll;
+  height: 100px;
 }
 
 #about .about-me {
   height: 60vh;
 }
+
 #about .profile-img {
   max-width: 100%;
 }
 
 #contact {
-  height: 50vh;
-  padding: 5rem;
   background-image: url("/ASSETS/SVG/Asset 1_1.svg");
-  background-size: 100%;
   background-repeat: no-repeat;
-}
-#contact .contact-icons {
-  height: 30px;
-}
-#contact .social div {
-  vertical-align: text-bottom;
+  background-size: 100%;
+  background-position: center;
+  background-attachment: scroll;
+  min-height: 30vh;
+  padding: 8rem 5rem 1rem;
 }
 
+#contact .social-table tr {
+  height: 40px;
+}
+
+#contact .social-table tr td a {
+  position: relative;
+  padding: 0 10px;
+  text-align: left;
+}
+
+#contact .social-table tr td a:hover {
+  color: #ff6a3d;
+}
+
+#contact .social-table .contact-icons {
+  height: 30px;
+}
+
+#contact .contact-table tr {
+  height: 40px;
+}
+
+#contact .contact-table tr td {
+  padding: 0 10px;
+}
+
+#contact .contact-table .contact-icons {
+  width: 20px;
+}
+
+#contact .contact-link {
+  color: white;
+  -webkit-text-decoration: #ff6a3d;
+          text-decoration: #ff6a3d;
+  -webkit-text-decoration-line: blink;
+          text-decoration-line: blink;
+}
 /*# sourceMappingURL=portfolio.css.map */
