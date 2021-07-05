@@ -6,7 +6,7 @@
 }
 
 .f-medium {
-  font-size: calc(1.375rem+4vw);
+  font-size: calc(1.375rem+ 4vw);
 }
 
 .isolate {
@@ -41,51 +41,26 @@
   color: #f4db7d;
 }
 
+.font-weight-5 {
+  font-weight: 500;
+}
+
+.font-weight-4 {
+  font-weight: 400;
+}
+
+.font-weight-3 {
+  font-weight: 300;
+}
+
 * {
-  font-family: "Ubuntu Medium", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: #fff;
 }
 
 html {
   overflow-x: hidden;
   background: #1a2238;
-}
-
-body {
-  scrollbar-color: black;
-}
-
-/* Third Div */
-.project-text {
-  pointer-events: none;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-}
-
-figcaption a {
-  height: 100%;
-}
-
-figcaption a img {
-  width: 20px;
-}
-
-@-webkit-keyframes showNavBarAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100%;
-  }
-}
-
-@keyframes showNavBarAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100%;
-  }
 }
 
 #homeParent {
@@ -100,26 +75,25 @@ figcaption a img {
 #header nav {
   /* Header > navbar */
 }
-
 #header nav .navbar-brand {
   font-size: 2rem;
 }
-
-#header nav .navbar-brand span {
-  color: #ff6a3d;
-}
-
 #header nav .nav-item {
   font-size: 1.3rem;
+}
+#header.toFixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #1a2238;
+  z-index: 100;
+  width: 100vw;
 }
 
 /* Header welcome */
 #welcome {
   /* Text Section */
-}
-
-#path {
-  background-color: #1a2238;
 }
 
 .first-wavy {
@@ -131,28 +105,24 @@ figcaption a img {
   height: 100px;
 }
 
+#path {
+  background-color: #1a2238;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: auto;
+  margin: 0 10px;
+}
+.slick-slide div {
+  height: 100%;
+}
+
 #projects {
-  isolation: isolate;
   background-color: #fffffa;
-}
-
-#projects div.card {
-  background-color: transparent;
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
-}
-
-#projects div.card div.card-body .card-title {
-  color: #1a2238;
-}
-
-#projects div.card div.card-body .card-text {
-  color: #29375b;
-}
-
-#projects div.card div.card-body .frameworkList small,
-#projects div.card div.card-body .languageList small {
-  color: #ff6a3d !important;
 }
 
 .second-wavy {
@@ -165,58 +135,48 @@ figcaption a img {
 }
 
 #about .about-me {
-  height: 60vh;
+  min-height: 60vh;
 }
-
 #about .profile-img {
   max-width: 100%;
 }
 
 #contact {
-  background-image: url("/ASSETS/SVG/Asset 1_1.svg");
+  background-image: url("/ASSETS/SVG/contact-bg.svg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+  background-size: cover;
+  background-position: top;
   background-attachment: scroll;
-  min-height: 30vh;
-  padding: 8rem 5rem 1rem;
+  min-height: 50vh;
+  padding: 8rem 5rem 0;
 }
-
 #contact .social-table tr {
   height: 40px;
 }
-
 #contact .social-table tr td a {
   position: relative;
   padding: 0 10px;
   text-align: left;
 }
-
 #contact .social-table tr td a:hover {
   color: #ff6a3d;
 }
-
 #contact .social-table .contact-icons {
   height: 30px;
 }
-
 #contact .contact-table tr {
   height: 40px;
 }
-
 #contact .contact-table tr td {
   padding: 0 10px;
 }
-
 #contact .contact-table .contact-icons {
   width: 20px;
 }
-
 #contact .contact-link {
   color: white;
-  -webkit-text-decoration: #ff6a3d;
-          text-decoration: #ff6a3d;
-  -webkit-text-decoration-line: blink;
-          text-decoration-line: blink;
+  text-decoration: #ff6a3d;
+  text-decoration-line: blink;
 }
+
 /*# sourceMappingURL=portfolio.css.map */

@@ -20,7 +20,7 @@ $p-for-not-nav: 70px;
   font-size: calc(1.375rem + 7vw);
 }
 .f-medium {
-  font-size: calc(1.375rem+4vw);
+  font-size: calc(1.375rem+ 4vw);
 }
 .isolate {
   isolation: isolate;
@@ -41,7 +41,6 @@ $p-for-not-nav: 70px;
 .f-orangy {
   color: $orangy;
 }
-
 .f-purple-light {
   color: $purple-light;
 }
@@ -50,6 +49,15 @@ $p-for-not-nav: 70px;
 }
 .f-sandy {
   color: $sandy;
+}
+.font-weight-5 {
+  font-weight: 500;
+}
+.font-weight-4 {
+  font-weight: 400;
+}
+.font-weight-3 {
+  font-weight: 300;
 }
 // Background function
 @mixin backgroundImage($url, $size, $position, $attachment: scroll) {
@@ -61,40 +69,13 @@ $p-for-not-nav: 70px;
 }
 
 * {
-  font-family: "Ubuntu Medium", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: #fff;
 }
 
 html {
   overflow-x: hidden;
   background: #1a2238;
-}
-
-body {
-  scrollbar-color: black;
-}
-
-/* Third Div */
-.project-text {
-  pointer-events: none;
-  transition: 0.1s;
-}
-
-figcaption a {
-  height: 100%;
-}
-
-figcaption a img {
-  width: 20px;
-}
-
-@keyframes showNavBarAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100%;
-  }
 }
 
 // Section combination of nav bar and welcome
@@ -108,13 +89,19 @@ figcaption a img {
     /* Header > navbar */
     .navbar-brand {
       font-size: 2rem;
-      span {
-        color: $orangy;
-      }
     }
     .nav-item {
       font-size: 1.3rem;
     }
+  }
+  &.toFixed{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $midnight;
+    z-index: 100;
+    width: 100vw;
   }
 }
 /* Header welcome */
@@ -122,41 +109,30 @@ figcaption a img {
   /* Text Section */
 }
 
+.first-wavy {
+  @include backgroundImage("/ASSETS/SVG/wavy-v1.svg", cover, bottom, scroll);
+  height: 100px;
+}
 // Path
 #path {
   background-color: $primary-bg-color;
 }
-
-.first-wavy {
-  @include backgroundImage("/ASSETS/SVG/wavy-v1.svg", cover, bottom);
-  height: 100px;
+.slick-track {
+  display: flex !important;
 }
 
-// Projects
-#projects {
-  isolation: isolate;
-  background-color: #fffffa;
-  // project cards
-  div.card {
-    background-color: transparent;
-    box-shadow: $b-shadow;
-    div.card-body {
-      .card-title {
-        color: $midnight;
-      }
-      .card-text {
-        color: $twilight;
-      }
-      .frameworkList,
-      .languageList {
-        small {
-          color: $orangy !important;
-        }
-      }
-    }
+.slick-slide {
+  height: auto;
+  margin: 0 10px;
+  div{
+    height: 100%;
   }
 }
+// Projects
+#projects {
+  background-color: #fffffa;
 
+} 
 .second-wavy {
   @include backgroundImage("/ASSETS/SVG/wavy2-v1.svg", cover, top);
   height: 100px;
@@ -164,7 +140,7 @@ figcaption a img {
 
 #about {
   .about-me {
-    height: 60vh;
+    min-height: 60vh;
   }
   .profile-img {
     max-width: 100%;
@@ -172,9 +148,9 @@ figcaption a img {
 }
 
 #contact {
-  @include backgroundImage("/ASSETS/SVG/Asset 1_1.svg", 100%, center);
-  min-height: 30vh;
-  padding: 8rem 5rem 1rem;
+  @include backgroundImage("/ASSETS/SVG/contact-bg.svg", cover, top);
+  min-height: 50vh;
+  padding: 8rem 5rem 0;
   .social-table {
     tr {
       height: 40px;

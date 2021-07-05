@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="vendor/imagehover.min.css">
   <link rel="stylesheet" href="vendor/bootstrap-5.0.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="vendor/animate.min.css">
+  <link rel="stylesheet" href="vendor/slick-1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="vendor/slick-1.8.1/slick/slick-theme.css">
   <link rel="stylesheet" href="CSS/portfolio.css">
   <title>Portfolio</title>
   <style>
@@ -17,12 +19,12 @@
 
 <body class="">
   <section class="vh-100" id="homeParent">
-    <header class="container-sm" id="header">
+    <header class="container-fluid" id="header">
       <div class="row">
         <div class="col-12">
           <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid px-0">
-              <a class="navbar-brand f-medium" href="#">Nyareh<span class="f-orangy">D</span></a>
+            <div class="container-sm px-0">
+              <a class="navbar-brand f-medium font-weight-5" href="#">Nyareh<span class="f-orangy">D</span></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,17 +32,17 @@
               <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item mx-md-3">
-                    <a class="nav-link active" aria-current="page" href="#homeParent">Home</a>
+                    <a class="nav-link font-weight-5 active" aria-current="page" href="#homeParent">Home</a>
                   </li>
 
                   <li class="nav-item mx-md-3">
-                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link font-weight-5" href="#projects">Projects</a>
                   </li>
                   <li class="nav-item mx-md-3">
-                    <a class="nav-link" href="#path">Path</a>
+                    <a class="nav-link font-weight-5" href="#path">Path</a>
                   </li>
                   <li class="nav-item mx-md-3">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#about" class="nav-link font-weight-5">About</a>
                   </li>
                 </ul>
               </div>
@@ -54,14 +56,14 @@
         <div class="col-12">
           <div class="row">
             <div class="col-12">
-              <p class="h2">
-                <span class="f-purple-light">OH</span>, Hi There!
+              <p class="h2 font-weight-3">
+                <span class="f-purple-light font-weight-4">OH</span>, Hi There!
               </p>
             </div>
           </div>
           <div class="row">
             <div class="col-12">
-              <p class="f-large">I'm
+              <p class="f-large font-weight-5">I'm
                 <br class="d-block d-lg-none">
                 <span class="text-hightlight mix-blend-difference f-orangy">Nyareh</span>
               </p>
@@ -76,10 +78,10 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <p class="h4">
+              <p class="h4 font-weight-3">
                 Wanna know more about how I've been so far?
               </p>
-              <p class="h4">
+              <p class="h4 font-weight-3">
                 Just keep scrolling.
               </p>
             </div>
@@ -98,27 +100,27 @@
               <div class="row mb-3 project-intro mb-5">
                 <div class="col-12">
                   <p class="h1 f-midnight">Projects I've Done So Far</p>
-                  <p class="h4 f-twilight">While you're learning, you can't just study all the things </p>
-                  <p class="h4 f-twilight">But also have to do some projects
-                    to sharpen your skills
+                  <p class="h4 f-twilight font-weight-4">While you're learning, you can't just study all the things </p>
+                  <p class="h4 f-twilight font-weight-4">But also have to do some projects
+                    to sharpen <span class="f-orangy">your skills</span>
                   </p>
                 </div>
               </div>
-              <div class="row flex-row justify-content-center g-3">
-                <div class="col-xxl-4 col-xl-5 col-md-6 col-12 mb-4">
+              <div class="row justify-content-center g-3 project-cards">
+                <div class="col-lg-4 col-md-6 col-12">
                   <div class="card">
                     <div class="row g-0">
                       <img src="ASSETS/projects/Screenshot%202021-07-01%20at%2015-21-10%20Marketing.png"
                         class="img-fluid rounded-start w-100" alt="..." style="min-height: 250px">
-                      <div class="col-12">
+                      <div class="col-12 project-card-content">
                         <div class="card-body my-1">
-                          <h5 class="card-title">Marketing Company Website (SWD Project)</h5>
-                          <p class="card-text">This project is used to apply all of the knowledge while learning in
+                          <h5 class="card-title f-midnight">Marketing Company Website <span class="f-orangy">(SWD Project)</span></h5>
+                          <p class="card-text f-twilight">This project is used to apply all of the knowledge while learning in
                             SWD</p>
-                          <p class="card-text languageList"><small class="text-muted">Languages Used : </small>HTML,
+                          <p class="card-text languageList f-purple-dark"><small class="text-muted">Languages Used : </small>HTML,
                             CSS,
                             JS</p>
-                          <p class="card-text frameworkList"><small class="text-muted">Library or Framework Used
+                          <p class="card-text frameworkList f-purple-dark"><small class="text-muted">Library or Framework Used
                               : </small>Bootstrap,
                             Fontawesome, jQuery, slick.js and waypoint.js</p>
                         </div>
@@ -126,39 +128,39 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-xxl-4 col-xl-5 col-md-6 col-12 mb-4">
+                <div class="col-lg-4 col-md-6 col-12">
                   <div class="card h-100">
                     <div class="row">
                       <img src="ASSETS/projects/Screenshot%202021-06-30%20at%2013-39-13%20Calculator%20Cropped.png"
                         class="img-fluid rounded-start w-100" alt="..." style="min-height: 250px">
-                      <div class="col-12">
+                      <div class="col-12 project-card-content">
                         <div class="card-body my-1">
-                          <h5 class="card-title">Calculator with Dark Mode (SWD Project)</h5>
-                          <p class="card-text">This project is used to apply all of the knowledge while learning in
+                          <h5 class="card-title f-midnight">Calculator with Dark Mode <span class="f-orangy">(SWD Project)</span></h5>
+                          <p class="card-text f-twilight">This project is used to apply all of the knowledge while learning in
                             BWD</p>
-                          <p class="card-text languageList"><small class="text-muted">Languages Used :</small> HTML,
+                          <p class="card-text languageList f-purple-dark"><small class="text-muted">Languages Used :</small> HTML,
                             CSS,
                             JS</p>
-                          <p class="card-text frameworkList"><small class="text-muted">Library or Framework Used
+                          <p class="card-text frameworkList f-purple-dark"><small class="text-muted">Library or Framework Used
                               : </small>None</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-xxl-4 col-xl-5 col-md-6 col-12 mb-4">
+                <div class="col-lg-4 col-md-6 col-12">
                   <div class="card rounded-3 h-100">
                     <div class="row g-0">
                       <img src="ASSETS/cropped%20snake.png" class="img-fluid rounded-start w-100" alt="..."
                         style="min-height: 250px">
-                      <div class="col-12">
+                      <div class="col-12 project-card-content ">
                         <div class="card-body my-1">
-                          <h5 class="card-title">The Legendary Snake Game</h5>
-                          <p class="card-text">A project to sharpen my JavaScript skill</p>
-                          <p class="card-text languageList"><small class="text-muted">Languages Used :</small> HTML,
+                          <h5 class="card-title f-midnight">The Legendary Snake Game <span class="f-orangy">(Self Project)</span></h5>
+                          <p class="card-text f-twilight">A project to sharpen my JavaScript skill</p>
+                          <p class="card-text languageList f-purple-dark"><small class="text-muted">Languages Used :</small> HTML,
                             CSS,
                             JS</p>
-                          <p class="card-text frameworkList"><small class="text-muted">Library or Framework Used
+                          <p class="card-text frameworkList f-purple-dark"><small class="text-muted">Library or Framework Used
                               : </small>Vanilla JavaScript</p>
                         </div>
                       </div>
@@ -172,8 +174,8 @@
       </div>
     </div>
   </section>
-  <section class="container-fluid first-wavy"></section>
-  <section class="container-fluid" id="path">
+  <section class="first-wavy"></section>
+  <section class="container-fluid" id="path">   
     <div class="row">
       <div class="col-12">
         <div class="min-vh-100 container-sm">
@@ -183,18 +185,18 @@
               <div class="p-3">
                 <blockquote class="h2 f-purple-light">"A journey of a thousand miles begins with a single step"
                 </blockquote>
-                <p class="h2">As said by <em class="f-sandy">Lao Tzu </em></p>
+                <p class="h2 font-weight-3">As said by <em class="f-sandy">Lao Tzu </em></p>
               </div>
-              <p class="h5">I Started my web development learning journey a years ago. Here is the roadmap.</p>
+              <p class="h5 font-weight-4">I Started my web development learning journey a years ago. Here is the roadmap.</p>
 
             </div>
           </div>
           <div class="row">
             <div class="col-12">
               <div class="">
-                <img src="ASSETS/SVG/roadmap-lg-v10.svg" alt="Road map large"
+                <img src="ASSETS/path-v2.svg" alt="Road map large"
                   class="d-none d-md-block roadmap-lg w-100">
-                <img src="ASSETS/SVG/roadmap-small.svg" alt="Road map small" class="d-block d-md-none roadmap-sm">
+                <img src="ASSETS/projects/path-small.svg" alt="Road map small" class="d-block d-md-none roadmap-sm">
               </div>
             </div>
           </div>
@@ -203,21 +205,20 @@
     </div>
   </section>
   <section class="container-fluid second-wavy"></section>
-
-  <section id="about" class="container-sm">
+  <section id="about" class="container-sm mb-3">
     <div class="row">
       <div class="col-12">
         <div class="row">
           <div class="col-12">
-            <p class="f-medium f-midnight">This Section is About Me</p>
+            <p class="h1 f-orangy font-weight-5 mt-5">This Section is About Me</p>
           </div>
         </div>
         <div class="row about-me align-items-center">
           <div class="col-8 about-text">
-            <p class="h1 f-midnight">
+            <p class="h2 f-midnight">
               Nyareh David
             </p>
-            <p class="h5 f-twilight">
+            <p class="h5 f-twilight font-weight-4">
               I just graduated high school recently. After that, I found an app called MIMO, which is for learning web
               development for beginners.
               With it, I got in touch with computer programming for the first time.
@@ -228,8 +229,7 @@
           </div>
           <div class="col-4 about-img">
             <div class="w-100">
-              <img src="/ASSETS/139718525_489893409079775_4635186254791302282a_n.jpg" alt=""
-                class="profile-img rounded-3">
+              <img src="/ASSETS/139718525_489893409079775_4635186254791302282a_n.jpg" alt="" class="profile-img rounded-3">
             </div>
           </div>
         </div>
@@ -283,6 +283,7 @@
   <script src="vendor/jquery-3.3.1.min.js"></script>
   <script src="vendor/bootstrap-5.0.1-dist/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/waypoint/jquery.waypoints.min.js"></script>
+  <script src="vendor/slick-1.8.1/slick/slick.js"></script>
   <script src="JS/index.js"></script>
 </body>
 
