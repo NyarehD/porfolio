@@ -13,7 +13,7 @@ $sandy: #f4db7d;
 $primary-bg-color: #1a2238;
 
 /* padding for content not to be covered with navbar */
-$p-for-not-nav: 70px;
+$p-for-not-nav: 100px;
 
 /* Universal Class */
 .f-large {
@@ -39,7 +39,7 @@ $p-for-not-nav: 70px;
 }
 
 .f-orangy {
-  color: $orangy;
+  color: $orangy !important;
 }
 .f-purple-light {
   color: $purple-light;
@@ -58,6 +58,9 @@ $p-for-not-nav: 70px;
 }
 .font-weight-3 {
   font-weight: 300;
+}
+.p-for-not-nav{
+  padding-top: $p-for-not-nav;
 }
 // Background function
 @mixin backgroundImage($url, $size, $position, $attachment: scroll) {

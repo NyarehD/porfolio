@@ -26,7 +26,7 @@
 }
 
 .f-orangy {
-  color: #ff6a3d;
+  color: #ff6a3d !important;
 }
 
 .f-purple-light {
@@ -53,6 +53,10 @@
   font-weight: 300;
 }
 
+.p-for-not-nav {
+  padding-top: 100px;
+}
+
 * {
   font-family: "Ubuntu", sans-serif;
   color: #fff;
@@ -75,12 +79,15 @@ html {
 #header nav {
   /* Header > navbar */
 }
+
 #header nav .navbar-brand {
   font-size: 2rem;
 }
+
 #header nav .nav-item {
   font-size: 1.3rem;
 }
+
 #header.toFixed {
   position: fixed;
   top: 0;
@@ -110,6 +117,8 @@ html {
 }
 
 .slick-track {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
 }
 
@@ -117,6 +126,7 @@ html {
   height: auto;
   margin: 0 10px;
 }
+
 .slick-slide div {
   height: 100%;
 }
@@ -137,6 +147,7 @@ html {
 #about .about-me {
   min-height: 60vh;
 }
+
 #about .profile-img {
   max-width: 100%;
 }
@@ -150,33 +161,42 @@ html {
   min-height: 50vh;
   padding: 8rem 5rem 0;
 }
+
 #contact .social-table tr {
   height: 40px;
 }
+
 #contact .social-table tr td a {
   position: relative;
   padding: 0 10px;
   text-align: left;
 }
+
 #contact .social-table tr td a:hover {
   color: #ff6a3d;
 }
+
 #contact .social-table .contact-icons {
   height: 30px;
 }
+
 #contact .contact-table tr {
   height: 40px;
 }
+
 #contact .contact-table tr td {
   padding: 0 10px;
 }
+
 #contact .contact-table .contact-icons {
   width: 20px;
 }
+
 #contact .contact-link {
   color: white;
-  text-decoration: #ff6a3d;
-  text-decoration-line: blink;
+  -webkit-text-decoration: #ff6a3d;
+          text-decoration: #ff6a3d;
+  -webkit-text-decoration-line: blink;
+          text-decoration-line: blink;
 }
-
 /*# sourceMappingURL=portfolio.css.map */
