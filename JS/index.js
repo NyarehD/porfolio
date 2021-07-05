@@ -27,7 +27,7 @@ $(document).ready(function () {
     ]
   });
   $("#projects").waypoint(function (direction) {
-    $("#header").toggleClass("toFixed animate__animated animate__fadeInDown shadow-3")
+    $("#header").toggleClass("toFixed animate__animated animate__fadeInDown b-shadow")
     console.log(direction)
   }, {
     offset: "10%"
@@ -49,7 +49,6 @@ $(document).ready(function () {
     function setActiveInNavBar(currentSectionId) {
       $(".nav-link").removeClass("f-orangy");
       $(`.nav-link[href='#${currentSectionId}']`).addClass("f-orangy")
-      console.log(currentSectionId);
     }
     console.log("What the fuck");
   }

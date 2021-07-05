@@ -1,7 +1,8 @@
 $transparency-for-me: rgba(95, 95, 95, 0.342);
 $golden: #daa520;
 $t-shadow: 0 1px 2px #1a1e21;
-$b-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
+$b-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.521) !important;
+;
 
 /* Colors */
 $midnight: #1a2238;
@@ -59,7 +60,7 @@ $p-for-not-nav: 100px;
 .font-weight-3 {
   font-weight: 300;
 }
-.p-for-not-nav{
+.p-for-not-nav {
   padding-top: $p-for-not-nav;
 }
 // Background function
@@ -88,6 +89,9 @@ html {
 
 /* Header */
 #header {
+  &.b-shadow{
+    box-shadow: $b-shadow;
+  }
   nav {
     /* Header > navbar */
     .navbar-brand {
@@ -97,7 +101,7 @@ html {
       font-size: 1.3rem;
     }
   }
-  &.toFixed{
+  &.toFixed {
     position: fixed;
     top: 0;
     right: 0;
@@ -108,9 +112,6 @@ html {
   }
 }
 /* Header welcome */
-#welcome {
-  /* Text Section */
-}
 
 .first-wavy {
   @include backgroundImage("/ASSETS/SVG/wavy-v1.svg", cover, bottom, scroll);
@@ -127,15 +128,14 @@ html {
 .slick-slide {
   height: auto;
   margin: 0 10px;
-  div{
+  div {
     height: 100%;
   }
 }
 // Projects
 #projects {
   background-color: #fffffa;
-
-} 
+}
 .second-wavy {
   @include backgroundImage("/ASSETS/SVG/wavy2-v1.svg", cover, top);
   height: 100px;

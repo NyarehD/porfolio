@@ -76,6 +76,11 @@ html {
 }
 
 /* Header */
+#header.b-shadow {
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.521) !important;
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.521) !important;
+}
+
 #header nav {
   /* Header > navbar */
 }
@@ -99,10 +104,6 @@ html {
 }
 
 /* Header welcome */
-#welcome {
-  /* Text Section */
-}
-
 .first-wavy {
   background-image: url("/ASSETS/SVG/wavy-v1.svg");
   background-repeat: no-repeat;
