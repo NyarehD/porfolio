@@ -17,21 +17,11 @@ $p-for-not-nav: 70px;
 
 /* Universal Class */
 .f-large {
-  font-size: 6rem;
+  font-size: calc(1.375rem + 7vw);
 }
-
 .f-medium {
-  font-size: 3rem;
+  font-size: calc(1.375rem+4vw);
 }
-
-.f-small {
-  font-size: 2rem;
-}
-
-.f-xsmall {
-  font-size: 1.4rem;
-}
-
 .isolate {
   isolation: isolate;
 }
@@ -52,6 +42,15 @@ $p-for-not-nav: 70px;
   color: $orangy;
 }
 
+.f-purple-light {
+  color: $purple-light;
+}
+.f-purple-dark {
+  color: $purple-dark;
+}
+.f-sandy {
+  color: $sandy;
+}
 // Background function
 @mixin backgroundImage($url, $size, $position, $attachment: scroll) {
   background-image: url($url);
@@ -75,7 +74,6 @@ body {
   scrollbar-color: black;
 }
 
-
 /* Third Div */
 .project-text {
   pointer-events: none;
@@ -90,8 +88,6 @@ figcaption a img {
   width: 20px;
 }
 
-
-
 @keyframes showNavBarAnimation {
   from {
     opacity: 0;
@@ -101,68 +97,34 @@ figcaption a img {
   }
 }
 
-/* Header */
-#header {
-  nav {
-    /* Header > navbar */
-    .navbar-brand {
-      span {
-        color: $orangy;
-      }
-    }
-
-    .active {
-      color: var(--t-active) !important;
-    }
-
-    .navbar-brand {
-      font-size: 1.8rem;
-    }
-
-    .nav-link {
-      font-size: 1.2rem;
-    }
-  }
-}
-
 // Section combination of nav bar and welcome
 #homeParent {
   @include backgroundImage("/ASSETS/secondbackground.svg", cover, center, fixed);
 }
 
+/* Header */
+#header {
+  nav {
+    /* Header > navbar */
+    .navbar-brand {
+      font-size: 2rem;
+      span {
+        color: $orangy;
+      }
+    }
+    .nav-item {
+      font-size: 1.3rem;
+    }
+  }
+}
 /* Header welcome */
 #welcome {
   /* Text Section */
-
-  p.f-large {
-    color: $purple-light;
-
-    span {
-    }
-  }
-
-  p.f-medium {
-    color: $purple-light;
-
-    span {
-    }
-  }
 }
 
 // Path
 #path {
   background-color: $primary-bg-color;
-
-  div.col-12 {
-    p.f-medium {
-      color: $sandy;
-    }
-
-    blockquote,
-    blockquote + p > em {
-      color: $purple-light;
-    }
-  }
 }
 
 .first-wavy {
@@ -174,24 +136,17 @@ figcaption a img {
 #projects {
   isolation: isolate;
   background-color: #fffffa;
-
-  .project-intro {
-  }
-
   // project cards
   div.card {
     background-color: transparent;
     box-shadow: $b-shadow;
-
     div.card-body {
       .card-title {
         color: $midnight;
       }
-
       .card-text {
         color: $twilight;
       }
-
       .frameworkList,
       .languageList {
         small {
@@ -211,13 +166,6 @@ figcaption a img {
   .about-me {
     height: 60vh;
   }
-
-  .about-text {
-  }
-
-  .about-img {
-  }
-
   .profile-img {
     max-width: 100%;
   }
@@ -227,7 +175,6 @@ figcaption a img {
   @include backgroundImage("/ASSETS/SVG/Asset 1_1.svg", 100%, center);
   min-height: 30vh;
   padding: 8rem 5rem 1rem;
-
   .social-table {
     tr {
       height: 40px;

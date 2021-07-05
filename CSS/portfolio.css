@@ -2,19 +2,11 @@
 /* padding for content not to be covered with navbar */
 /* Universal Class */
 .f-large {
-  font-size: 6rem;
+  font-size: calc(1.375rem + 7vw);
 }
 
 .f-medium {
-  font-size: 3rem;
-}
-
-.f-small {
-  font-size: 2rem;
-}
-
-.f-xsmall {
-  font-size: 1.4rem;
+  font-size: calc(1.375rem+4vw);
 }
 
 .isolate {
@@ -35,6 +27,18 @@
 
 .f-orangy {
   color: #ff6a3d;
+}
+
+.f-purple-light {
+  color: #9daaf2;
+}
+
+.f-purple-dark {
+  color: #838ecf;
+}
+
+.f-sandy {
+  color: #f4db7d;
 }
 
 * {
@@ -84,27 +88,6 @@ figcaption a img {
   }
 }
 
-/* Header */
-#header nav {
-  /* Header > navbar */
-}
-
-#header nav .navbar-brand span {
-  color: #ff6a3d;
-}
-
-#header nav .active {
-  color: var(--t-active) !important;
-}
-
-#header nav .navbar-brand {
-  font-size: 1.8rem;
-}
-
-#header nav .nav-link {
-  font-size: 1.2rem;
-}
-
 #homeParent {
   background-image: url("/ASSETS/secondbackground.svg");
   background-repeat: no-repeat;
@@ -113,30 +96,30 @@ figcaption a img {
   background-attachment: fixed;
 }
 
+/* Header */
+#header nav {
+  /* Header > navbar */
+}
+
+#header nav .navbar-brand {
+  font-size: 2rem;
+}
+
+#header nav .navbar-brand span {
+  color: #ff6a3d;
+}
+
+#header nav .nav-item {
+  font-size: 1.3rem;
+}
+
 /* Header welcome */
 #welcome {
   /* Text Section */
 }
 
-#welcome p.f-large {
-  color: #9daaf2;
-}
-
-#welcome p.f-medium {
-  color: #9daaf2;
-}
-
 #path {
   background-color: #1a2238;
-}
-
-#path div.col-12 p.f-medium {
-  color: #f4db7d;
-}
-
-#path div.col-12 blockquote,
-#path div.col-12 blockquote + p > em {
-  color: #9daaf2;
 }
 
 .first-wavy {
