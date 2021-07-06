@@ -38,31 +38,28 @@ $(document).ready(function () {
   let previousSection;
   $(window).scroll(function (event) {
     let current = $(this).scrollTop();
-    if ((this.innerHeight * 0.9) >= current) {
+
+    // To hide navbar while in header section
+    if (this.innerHeight >= current) {
       $('#header').addClass("toFixedHide").removeClass("toFixedShow b-shadow")
       console.log(1);
-    }else {
-      if (previousSection<current) {
+    } else {
+      // To hide navbar while scrolling down
+      if (previousSection <= current) {
         $('#header').addClass("toFixedHide").removeClass("toFixedShow b-shadow")
-      } else {
-        //up
+        console.log(2);
+      } else if (previousSection > current) {
+        /**
+         * The reason why I didn't use else is that the classes can be messed up like below
+        *So by default, make the 2 and 3 to trigger simutaneously
+        *Because we haven't assigned previousSection yet
+         */
+        // To show navbar while scrolling up
         $('#header').addClass("toFixedShow b-shadow").removeClass("toFixedHide")
+        console.log(3);
       }
       previousSection = current;
     }
-
-    // //down
-    // if (previousSection < current) {
-    //   $('#header').addClass("toFixedHide").removeClass("toFixedShow b-shadow");
-    // } else {
-    //   //up
-    //   //
-    //   if ((this.innerHeight * 0.9) >= current) {
-    //     $('#header').addClass("toFixedShow b-shadow").removeClass("toFixedHide");
-    //   } else {
-    //     $("#header").addClass("toFixedHide").removeClass("toFixedShow b-shadow");
-    //   }
-    // }
   })
   function setActiveWhileScrolling() {
     let sections = $("section[id]");// For selecting section elements with id attributes

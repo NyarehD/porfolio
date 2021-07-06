@@ -89,6 +89,7 @@ html {
 /* Header */
 #header {
   z-index: 1000;
+  margin: 0 !important;
   &.b-shadow {
     box-shadow: $b-shadow;
   }

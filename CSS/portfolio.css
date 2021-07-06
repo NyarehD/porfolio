@@ -78,6 +78,7 @@ html {
 /* Header */
 #header {
   z-index: 1000;
+  margin: 0 !important;
 }
 
 #header.b-shadow {
