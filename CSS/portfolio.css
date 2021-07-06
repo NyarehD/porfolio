@@ -76,9 +76,13 @@ html {
 }
 
 /* Header */
+#header {
+  z-index: 1000;
+}
+
 #header.b-shadow {
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.521) !important;
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.521) !important;
+  -webkit-box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.233) !important;
+          box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.233) !important;
 }
 
 #header nav {
@@ -93,7 +97,7 @@ html {
   font-size: 1.3rem;
 }
 
-#header.toFixed {
+#header.toFixedShow {
   position: fixed;
   top: 0;
   right: 0;
@@ -101,9 +105,95 @@ html {
   background-color: #1a2238;
   z-index: 100;
   width: 100vw;
+  -webkit-animation-name: slideInShow;
+          animation-name: slideInShow;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.15, 0.82, 0.83, 0.94);
+          animation-timing-function: cubic-bezier(0.15, 0.82, 0.83, 0.94);
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
 }
 
-/* Header welcome */
+#header.toFixedHide {
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-top: 0;
+  z-index: 100;
+  width: 100vw;
+  -webkit-animation-name: slideOutHide;
+          animation-name: slideOutHide;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+@-webkit-keyframes slideOutHide {
+  0% {
+    position: fixed;
+    background-color: #1a2238;
+    z-index: 100;
+  }
+  50% {
+    opacity: 0.5;
+    background-color: none;
+    top: -100px;
+    position: static;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutHide {
+  0% {
+    position: fixed;
+    background-color: #1a2238;
+    z-index: 100;
+  }
+  50% {
+    opacity: 0.5;
+    background-color: none;
+    top: -100px;
+    position: static;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideInShow {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes slideInShow {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
 .first-wavy {
   background-image: url("/ASSETS/SVG/wavy-v1.svg");
   background-repeat: no-repeat;
@@ -124,6 +214,7 @@ html {
 }
 
 .slick-slide {
+  z-index: 50;
   height: auto;
   margin: 0 10px;
 }

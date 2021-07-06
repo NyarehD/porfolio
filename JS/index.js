@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   $('.project-cards').slick({
     arrows: true,
     infinite: true,
@@ -15,6 +14,7 @@ $(document).ready(function () {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
+          dots: true
         }
       }, {
         breakpoint: "768",
@@ -26,11 +26,43 @@ $(document).ready(function () {
       }
     ]
   });
-  $("#projects").waypoint(function (direction) {
-    $("#header").toggleClass("toFixed animate__animated animate__fadeInDown b-shadow")
-    console.log(direction)
-  }, {
-    offset: "10%"
+
+
+  // $("#projects").waypoint(function (direction) {
+  //   $("#header").toggleClass("toFixed b-shadow")
+  // }, {
+  //   offset: "10%"
+  // })
+
+  // Global variable
+  let previousSection;
+  $(window).scroll(function (event) {
+    let current = $(this).scrollTop();
+    if ((this.innerHeight * 0.9) >= current) {
+      $('#header').addClass("toFixedHide").removeClass("toFixedShow b-shadow")
+      console.log(1);
+    }else {
+      if (previousSection<current) {
+        $('#header').addClass("toFixedHide").removeClass("toFixedShow b-shadow")
+      } else {
+        //up
+        $('#header').addClass("toFixedShow b-shadow").removeClass("toFixedHide")
+      }
+      previousSection = current;
+    }
+
+    // //down
+    // if (previousSection < current) {
+    //   $('#header').addClass("toFixedHide").removeClass("toFixedShow b-shadow");
+    // } else {
+    //   //up
+    //   //
+    //   if ((this.innerHeight * 0.9) >= current) {
+    //     $('#header').addClass("toFixedShow b-shadow").removeClass("toFixedHide");
+    //   } else {
+    //     $("#header").addClass("toFixedHide").removeClass("toFixedShow b-shadow");
+    //   }
+    // }
   })
   function setActiveWhileScrolling() {
     let sections = $("section[id]");// For selecting section elements with id attributes
@@ -41,7 +73,7 @@ $(document).ready(function () {
       offset: "10%"
     });
     sections.waypoint(function (direction) {
-      let currentSection = $(this.element).attr("id");  
+      let currentSection = $(this.element).attr("id");
       (direction === "up") && setActiveInNavBar(currentSection)
     }, {
       offset: "-100%"
@@ -50,7 +82,6 @@ $(document).ready(function () {
       $(".nav-link").removeClass("f-orangy");
       $(`.nav-link[href='#${currentSectionId}']`).addClass("f-orangy")
     }
-    console.log("What the fuck");
   }
   setActiveWhileScrolling();
 })

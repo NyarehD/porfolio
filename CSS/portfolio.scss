@@ -1,8 +1,7 @@
 $transparency-for-me: rgba(95, 95, 95, 0.342);
 $golden: #daa520;
 $t-shadow: 0 1px 2px #1a1e21;
-$b-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.521) !important;
-;
+$b-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.233) !important;
 
 /* Colors */
 $midnight: #1a2238;
@@ -89,7 +88,8 @@ html {
 
 /* Header */
 #header {
-  &.b-shadow{
+  z-index: 1000;
+  &.b-shadow {
     box-shadow: $b-shadow;
   }
   nav {
@@ -101,7 +101,7 @@ html {
       font-size: 1.3rem;
     }
   }
-  &.toFixed {
+  &.toFixedShow {
     position: fixed;
     top: 0;
     right: 0;
@@ -109,10 +109,53 @@ html {
     background-color: $midnight;
     z-index: 100;
     width: 100vw;
+    animation-name: slideInShow;
+    animation-duration: 0.75s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.15, 0.82, 0.83, 0.94);
+    animation-direction: normal;
+  }
+  &.toFixedHide {
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 0;
+    z-index: 100;
+    width: 100vw;
+    animation-name: slideOutHide;
+    animation-duration: 0.75s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
   }
 }
-/* Header welcome */
-
+@keyframes slideOutHide {
+  0% {
+    position: fixed;
+    background-color: $midnight;
+    z-index: 100;
+  }
+  50% {
+    opacity: 0.5;
+    background-color: none;
+    top: -100px;
+    position: static;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideInShow {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0;
+  }
+}
 .first-wavy {
   @include backgroundImage("/ASSETS/SVG/wavy-v1.svg", cover, bottom, scroll);
   height: 100px;
@@ -126,6 +169,7 @@ html {
 }
 
 .slick-slide {
+  z-index: 50;
   height: auto;
   margin: 0 10px;
   div {
