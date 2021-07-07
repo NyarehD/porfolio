@@ -53,6 +53,9 @@ $primary-bg-color: #1a2238;
 .font-weight-3 {
   font-weight: 300;
 }
+.p-for-not-nav {
+  padding-top: 100px;
+}
 
 // Background function
 @mixin backgroundImage($url, $size, $position, $attachment: scroll) {
@@ -78,13 +81,14 @@ html {
   @include backgroundImage("/ASSETS/background/secondbackground.svg", cover, center, fixed);
 }
 
-/* Header */
+// Header
 #header {
   z-index: 1000;
   margin: 0 !important;
   &.b-shadow {
     box-shadow: $b-shadow;
   }
+  // Navbar
   nav {
     /* Header > navbar */
     .navbar-brand {
@@ -92,8 +96,61 @@ html {
     }
     .nav-item {
       font-size: 1.3rem;
+      padding: 0.25em;
+      isolation: isolate;
+      .nav-link.f-orangy {
+        position: relative;
+        isolation: isolate;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          transform: scaleY(0.05);
+          transform-origin: 0 100%;
+          transition: transform 0.25s;
+          mix-blend-mode: difference;
+          background-color: currentColor;
+        }
+        &:focus {
+          outline: none;
+        }
+        &:focus,
+        &:hover {
+          &::before {
+            transform: none;
+          }
+        }
+      }
+      .nav-link {
+        position: relative;
+        color: white;
+        &::before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          content: "";
+          transform: scaleY(0);
+          background-color: currentColor;
+          mix-blend-mode: difference;
+          transition: transform 0.25s;
+        }
+        &:focus{
+          outline: none;
+        }
+        &:focus, &:hover{
+          &::before{
+            transform: none;
+          }
+        }
+      }
     }
   }
+  // For Navbar animation
   &.toFixedShow {
     position: fixed;
     top: 0;
@@ -122,6 +179,83 @@ html {
     animation-direction: normal;
   }
 }
+
+// Projects
+#projects {
+  @include backgroundImage("/ASSETS/background/wavy1-v2.svg", contain, bottom, scroll);
+  background-color: #fffffa;
+  .project-cards {
+    z-index: 10;
+    .languageList,
+    .frameworkList {
+      font-size: 1em;
+    }
+    .github-project-link-icon {
+      height: 15px;
+    }
+  }
+}
+
+.second-wavy {
+  @include backgroundImage("/ASSETS/background/wavy2-v1.svg", cover, top);
+  height: 100px;
+}
+
+// About
+#about {
+  .about-me {
+    min-height: 60vh;
+  }
+  .profile-img {
+    max-width: 100%;
+  }
+}
+
+// Path
+#path {
+  background-color: $primary-bg-color;
+}
+
+// Contact
+#contact {
+  @include backgroundImage("/ASSETS/background/contact-bg.svg", cover, top);
+  min-height: 40vh;
+  padding: 6vw 0 1vw;
+  .social-table,
+  .contact-table {
+    tr {
+      height: 40px;
+      td {
+        svg {
+          height: 35px;
+        }
+        a {
+          position: relative;
+          padding: 0 10px;
+          text-align: left;
+        }
+      }
+      &:hover {
+        td > a {
+          color: $orangy;
+        }
+        td > svg path {
+          fill: $orangy;
+        }
+      }
+    }
+    .contact-icons {
+      height: 30px;
+    }
+  }
+
+  .contact-link {
+    color: white;
+    text-decoration: $orangy;
+    text-decoration-line: blink;
+  }
+}
+
 // For navbar animation
 @keyframes slideOutHide {
   0% {
@@ -150,90 +284,16 @@ html {
     top: 0;
   }
 }
-// Path
-#path {
-  background-color: $primary-bg-color;
-}
 
-.first-wavy {
-  @include backgroundImage("/ASSETS/background/wavy-v1.svg", cover, bottom, scroll);
-  height: 100px;
-}
-// Projects
-#projects {
-  background-color: #fffffa;
-  .project-cards{
-    z-index: 10;
-    .languageList, .frameworkList{
-      font-size: 1em;
-    }
-    .github-project-link-icon{
-      height: 15px;
-    }
-  }
-}
-.second-wavy {
-  @include backgroundImage("/ASSETS/background/wavy2-v1.svg", cover, top);
-  height: 100px;
-}
-
-#about {
-  .about-me {
-    min-height: 60vh;
-  }
-  .profile-img {
-    max-width: 100%;
-  }
-}
-
-#contact {
-  @include backgroundImage("/ASSETS/background/contact-bg.svg", cover, top);
-  min-height: 40vh;
-  padding: 6vw 0 1vw;
-  .social-table {
-    tr {
-      height: 40px;
-      td {
-        a {
-          position: relative;
-          padding: 0 10px;
-          text-align: left;
-          
-          &:hover {
-            color: $orangy;
-          }
-        }
-      }
-    }
-    .contact-icons {
-      height: 30px;
-    }
-  }
-  .contact-table {
-    tr {
-      height: 40px;
-      
-      td {
-        padding: 0 10px;
-      }
-    }
-    .contact-icons {
-      width: 20px;
-    }
-  }
-  .contact-link {
-    color: white;
-    text-decoration: $orangy;
-    text-decoration-line: blink;
-  }
-}
+// End of document
 
 // For img-hover library
-[class*=" imghvr-"] figcaption,[class^=imghvr-] figcaption{
-  background-color: #1a2238;
+[class*=" imghvr-"] figcaption,
+[class^="imghvr-"] figcaption {
+  background-color: #1a2238e0;
 }
-figure.imghvr-reveal-up::before{
-  background-color: #29375b;
+figure.imghvr-reveal-up::before {
+  background-color: #29375b9f;
 }
 
 // For slick js
@@ -249,7 +309,12 @@ figure.imghvr-reveal-up::before{
     height: 100%;
   }
 }
+
 // Color of the dot
-.slick-dots li.slick-active button:before{
+.slick-dots li.slick-active button:before {
   color: $orangy;
+}
+
+.slick-dots li button::before {
+  color: white;
 }

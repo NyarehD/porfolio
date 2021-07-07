@@ -52,6 +52,10 @@
   font-weight: 300;
 }
 
+.p-for-not-nav {
+  padding-top: 100px;
+}
+
 * {
   font-family: "Ubuntu", sans-serif;
   color: #fff;
@@ -70,7 +74,6 @@ html {
   background-attachment: fixed;
 }
 
-/* Header */
 #header {
   z-index: 1000;
   margin: 0 !important;
@@ -91,6 +94,72 @@ html {
 
 #header nav .nav-item {
   font-size: 1.3rem;
+  padding: 0.25em;
+  isolation: isolate;
+}
+
+#header nav .nav-item .nav-link.f-orangy {
+  position: relative;
+  isolation: isolate;
+}
+
+#header nav .nav-item .nav-link.f-orangy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scaleY(0.05);
+          transform: scaleY(0.05);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  mix-blend-mode: difference;
+  background-color: currentColor;
+}
+
+#header nav .nav-item .nav-link.f-orangy:focus {
+  outline: none;
+}
+
+#header nav .nav-item .nav-link.f-orangy:focus::before, #header nav .nav-item .nav-link.f-orangy:hover::before {
+  -webkit-transform: none;
+          transform: none;
+}
+
+#header nav .nav-item .nav-link {
+  position: relative;
+  color: white;
+}
+
+#header nav .nav-item .nav-link::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  content: "";
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  background-color: currentColor;
+  mix-blend-mode: difference;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+#header nav .nav-item .nav-link:focus {
+  outline: none;
+}
+
+#header nav .nav-item .nav-link:focus::before, #header nav .nav-item .nav-link:hover::before {
+  -webkit-transform: none;
+          transform: none;
 }
 
 #header.toFixedShow {
@@ -130,6 +199,99 @@ html {
           animation-timing-function: ease-in-out;
   -webkit-animation-direction: normal;
           animation-direction: normal;
+}
+
+#projects {
+  background-image: url("/ASSETS/background/wavy1-v2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-attachment: scroll;
+  background-color: #fffffa;
+}
+
+#projects .project-cards {
+  z-index: 10;
+}
+
+#projects .project-cards .languageList,
+#projects .project-cards .frameworkList {
+  font-size: 1em;
+}
+
+#projects .project-cards .github-project-link-icon {
+  height: 15px;
+}
+
+.second-wavy {
+  background-image: url("/ASSETS/background/wavy2-v1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: scroll;
+  height: 100px;
+}
+
+#about .about-me {
+  min-height: 60vh;
+}
+
+#about .profile-img {
+  max-width: 100%;
+}
+
+#path {
+  background-color: #1a2238;
+}
+
+#contact {
+  background-image: url("/ASSETS/background/contact-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: scroll;
+  min-height: 40vh;
+  padding: 6vw 0 1vw;
+}
+
+#contact .social-table tr,
+#contact .contact-table tr {
+  height: 40px;
+}
+
+#contact .social-table tr td svg,
+#contact .contact-table tr td svg {
+  height: 35px;
+}
+
+#contact .social-table tr td a,
+#contact .contact-table tr td a {
+  position: relative;
+  padding: 0 10px;
+  text-align: left;
+}
+
+#contact .social-table tr:hover td > a,
+#contact .contact-table tr:hover td > a {
+  color: #ff6a3d;
+}
+
+#contact .social-table tr:hover td > svg path,
+#contact .contact-table tr:hover td > svg path {
+  fill: #ff6a3d;
+}
+
+#contact .social-table .contact-icons,
+#contact .contact-table .contact-icons {
+  height: 30px;
+}
+
+#contact .contact-link {
+  color: white;
+  -webkit-text-decoration: #ff6a3d;
+          text-decoration: #ff6a3d;
+  -webkit-text-decoration-line: blink;
+          text-decoration-line: blink;
 }
 
 @-webkit-keyframes slideOutHide {
@@ -190,106 +352,13 @@ html {
   }
 }
 
-#path {
-  background-color: #1a2238;
-}
-
-.first-wavy {
-  background-image: url("/ASSETS/background/wavy-v1.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  background-attachment: scroll;
-  height: 100px;
-}
-
-#projects {
-  background-color: #fffffa;
-}
-
-#projects .project-cards {
-  z-index: 10;
-}
-
-#projects .project-cards .languageList, #projects .project-cards .frameworkList {
-  font-size: 1em;
-}
-
-#projects .project-cards .github-project-link-icon {
-  height: 15px;
-}
-
-.second-wavy {
-  background-image: url("/ASSETS/background/wavy2-v1.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  background-attachment: scroll;
-  height: 100px;
-}
-
-#about .about-me {
-  min-height: 60vh;
-}
-
-#about .profile-img {
-  max-width: 100%;
-}
-
-#contact {
-  background-image: url("/ASSETS/background/contact-bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  background-attachment: scroll;
-  min-height: 40vh;
-  padding: 6vw 0 1vw;
-}
-
-#contact .social-table tr {
-  height: 40px;
-}
-
-#contact .social-table tr td a {
-  position: relative;
-  padding: 0 10px;
-  text-align: left;
-}
-
-#contact .social-table tr td a:hover {
-  color: #ff6a3d;
-}
-
-#contact .social-table .contact-icons {
-  height: 30px;
-}
-
-#contact .contact-table tr {
-  height: 40px;
-}
-
-#contact .contact-table tr td {
-  padding: 0 10px;
-}
-
-#contact .contact-table .contact-icons {
-  width: 20px;
-}
-
-#contact .contact-link {
-  color: white;
-  -webkit-text-decoration: #ff6a3d;
-          text-decoration: #ff6a3d;
-  -webkit-text-decoration-line: blink;
-          text-decoration-line: blink;
-}
-
-[class*=" imghvr-"] figcaption, [class^=imghvr-] figcaption {
-  background-color: #1a2238;
+[class*=" imghvr-"] figcaption,
+[class^="imghvr-"] figcaption {
+  background-color: #1a2238e0;
 }
 
 figure.imghvr-reveal-up::before {
-  background-color: #29375b;
+  background-color: #29375b9f;
 }
 
 .slick-track {
@@ -310,5 +379,9 @@ figure.imghvr-reveal-up::before {
 
 .slick-dots li.slick-active button:before {
   color: #ff6a3d;
+}
+
+.slick-dots li button::before {
+  color: white;
 }
 /*# sourceMappingURL=portfolio.css.map */
