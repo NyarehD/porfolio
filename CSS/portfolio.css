@@ -63,7 +63,7 @@ html {
 }
 
 #homeParent {
-  background-image: url("/ASSETS/secondbackground.svg");
+  background-image: url("/ASSETS/background/secondbackground.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -195,7 +195,7 @@ html {
 }
 
 .first-wavy {
-  background-image: url("/ASSETS/SVG/wavy-v1.svg");
+  background-image: url("/ASSETS/background/wavy-v1.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -211,12 +211,16 @@ html {
   z-index: 10;
 }
 
+#projects .project-cards .languageList, #projects .project-cards .frameworkList {
+  font-size: 1em;
+}
+
 #projects .project-cards .github-project-link-icon {
-  height: 10px;
+  height: 15px;
 }
 
 .second-wavy {
-  background-image: url("/ASSETS/SVG/wavy2-v1.svg");
+  background-image: url("/ASSETS/background/wavy2-v1.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -233,7 +237,7 @@ html {
 }
 
 #contact {
-  background-image: url("/ASSETS/SVG/contact-bg.svg");
+  background-image: url("/ASSETS/background/contact-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;

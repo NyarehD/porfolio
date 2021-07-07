@@ -1,9 +1,10 @@
+// Assets
 $transparency-for-me: rgba(95, 95, 95, 0.342);
-$golden: #daa520;
 $t-shadow: 0 1px 2px #1a1e21;
 $b-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.233) !important;
 
 /* Colors */
+$golden: #daa520;
 $midnight: #1a2238;
 $twilight: #29375b;
 $purple-light: #9daaf2;
@@ -62,18 +63,19 @@ $primary-bg-color: #1a2238;
   background-attachment: $attachment;
 }
 
+// Start of document styles
 * {
   font-family: "Ubuntu", sans-serif;
   color: #fff;
 }
 html {
   overflow-x: hidden;
-  background: #1a2238;
+  background: $midnight;
 }
 
 // Section combination of nav bar and welcome
 #homeParent {
-  @include backgroundImage("/ASSETS/secondbackground.svg", cover, center, fixed);
+  @include backgroundImage("/ASSETS/background/secondbackground.svg", cover, center, fixed);
 }
 
 /* Header */
@@ -154,7 +156,7 @@ html {
 }
 
 .first-wavy {
-  @include backgroundImage("/ASSETS/SVG/wavy-v1.svg", cover, bottom, scroll);
+  @include backgroundImage("/ASSETS/background/wavy-v1.svg", cover, bottom, scroll);
   height: 100px;
 }
 // Projects
@@ -162,13 +164,16 @@ html {
   background-color: #fffffa;
   .project-cards{
     z-index: 10;
+    .languageList, .frameworkList{
+      font-size: 1em;
+    }
     .github-project-link-icon{
-      height: 10px;
+      height: 15px;
     }
   }
 }
 .second-wavy {
-  @include backgroundImage("/ASSETS/SVG/wavy2-v1.svg", cover, top);
+  @include backgroundImage("/ASSETS/background/wavy2-v1.svg", cover, top);
   height: 100px;
 }
 
@@ -182,7 +187,7 @@ html {
 }
 
 #contact {
-  @include backgroundImage("/ASSETS/SVG/contact-bg.svg", cover, top);
+  @include backgroundImage("/ASSETS/background/contact-bg.svg", cover, top);
   min-height: 40vh;
   padding: 6vw 0 1vw;
   .social-table {
