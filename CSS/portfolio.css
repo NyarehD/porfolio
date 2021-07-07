@@ -1,5 +1,4 @@
 /* Colors */
-/* padding for content not to be covered with navbar */
 /* Universal Class */
 .f-large {
   font-size: calc(1.375rem + 7vw);
@@ -51,10 +50,6 @@
 
 .font-weight-3 {
   font-weight: 300;
-}
-
-.p-for-not-nav {
-  padding-top: 100px;
 }
 
 * {
@@ -195,6 +190,10 @@ html {
   }
 }
 
+#path {
+  background-color: #1a2238;
+}
+
 .first-wavy {
   background-image: url("/ASSETS/SVG/wavy-v1.svg");
   background-repeat: no-repeat;
@@ -202,38 +201,6 @@ html {
   background-position: bottom;
   background-attachment: scroll;
   height: 100px;
-}
-
-#path {
-  background-color: #1a2238;
-}
-
-.slick-track {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.slick-slide {
-  z-index: 50;
-  height: auto;
-  margin: 0 10px;
-}
-
-.slick-slide div {
-  height: 100%;
-}
-
-.slick-dots li.slick-active button:before {
-  color: #ff6a3d;
-}
-
-[class*=" imghvr-"] figcaption, [class^=imghvr-] figcaption {
-  background-color: #1a2238;
-}
-
-figure.imghvr-reveal-up::before {
-  background-color: #29375b;
 }
 
 #projects {
@@ -271,8 +238,8 @@ figure.imghvr-reveal-up::before {
   background-size: cover;
   background-position: top;
   background-attachment: scroll;
-  min-height: 50vh;
-  padding: 8rem 5rem 0;
+  min-height: 40vh;
+  padding: 6vw 0 1vw;
 }
 
 #contact .social-table tr {
@@ -311,5 +278,33 @@ figure.imghvr-reveal-up::before {
           text-decoration: #ff6a3d;
   -webkit-text-decoration-line: blink;
           text-decoration-line: blink;
+}
+
+[class*=" imghvr-"] figcaption, [class^=imghvr-] figcaption {
+  background-color: #1a2238;
+}
+
+figure.imghvr-reveal-up::before {
+  background-color: #29375b;
+}
+
+.slick-track {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.slick-slide {
+  z-index: 50;
+  height: auto;
+  margin: 0 10px;
+}
+
+.slick-slide div {
+  height: 100%;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff6a3d;
 }
 /*# sourceMappingURL=portfolio.css.map */
