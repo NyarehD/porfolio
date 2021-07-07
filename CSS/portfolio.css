@@ -141,7 +141,7 @@ html {
   0% {
     position: fixed;
     background-color: #1a2238;
-    z-index: 100;
+    z-index: 1000;
   }
   50% {
     opacity: 0.5;
@@ -161,7 +161,7 @@ html {
   0% {
     position: fixed;
     background-color: #1a2238;
-    z-index: 100;
+    z-index: 1000;
   }
   50% {
     opacity: 0.5;
@@ -224,8 +224,28 @@ html {
   height: 100%;
 }
 
+.slick-dots li.slick-active button:before {
+  color: #ff6a3d;
+}
+
+[class*=" imghvr-"] figcaption, [class^=imghvr-] figcaption {
+  background-color: #1a2238;
+}
+
+figure.imghvr-reveal-up::before {
+  background-color: #29375b;
+}
+
 #projects {
   background-color: #fffffa;
+}
+
+#projects .project-cards {
+  z-index: 10;
+}
+
+#projects .project-cards .github-project-link-icon {
+  height: 10px;
 }
 
 .second-wavy {

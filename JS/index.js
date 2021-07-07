@@ -13,7 +13,7 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
           dots: true
         }
       }, {
@@ -40,15 +40,15 @@ $(document).ready(function () {
     let current = $(this).scrollTop();
 
     // To hide navbar while in header section
-    if (this.innerHeight >= current) {
+    if ((this.innerHeight * 0.9) >= current) {
       $('#header').addClass("toFixedHide").removeClass("toFixedShow b-shadow")
       console.log(1);
     } else {
       // To hide navbar while scrolling down
-      if (previousSection <= current) {
+      if (previousSection < current) {
         $('#header').addClass("toFixedHide").removeClass("toFixedShow b-shadow")
         console.log(2);
-      } else if (previousSection > current) {
+      } else if (previousSection >= current) {
         /**
          * The reason why I didn't use else is that the classes can be messed up like below
         *So by default, make the 2 and 3 to trigger simutaneously
@@ -58,8 +58,8 @@ $(document).ready(function () {
         $('#header').addClass("toFixedShow b-shadow").removeClass("toFixedHide")
         console.log(3);
       }
-      previousSection = current;
     }
+    previousSection = $(this).scrollTop();
   })
   function setActiveWhileScrolling() {
     let sections = $("section[id]");// For selecting section elements with id attributes
@@ -81,5 +81,7 @@ $(document).ready(function () {
     }
   }
   setActiveWhileScrolling();
+  new WOW().init();
 })
+
 

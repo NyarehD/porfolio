@@ -134,7 +134,7 @@ html {
   0% {
     position: fixed;
     background-color: $midnight;
-    z-index: 100;
+    z-index: 1000;
   }
   50% {
     opacity: 0.5;
@@ -177,9 +177,26 @@ html {
     height: 100%;
   }
 }
+.slick-dots li.slick-active button:before{
+  color: $orangy;
+}
+
+// For img-hover
+[class*=" imghvr-"] figcaption,[class^=imghvr-] figcaption{
+  background-color: #1a2238;
+}
+figure.imghvr-reveal-up::before{
+  background-color: #29375b;
+}
 // Projects
 #projects {
   background-color: #fffffa;
+  .project-cards{
+    z-index: 10;
+    .github-project-link-icon{
+      height: 10px;
+    }
+  }
 }
 .second-wavy {
   @include backgroundImage("/ASSETS/SVG/wavy2-v1.svg", cover, top);
