@@ -65,7 +65,7 @@ html {
 }
 
 #homeParent {
-  background-image: url("/ASSETS/background/secondbackground.svg");
+  background-image: url("../ASSETS/background/secondbackground.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -173,7 +173,7 @@ html {
 }
 
 #projects {
-  background-image: url("/ASSETS/background/wavy1-v2.svg");
+  background-image: url("../ASSETS/background/wavy1-v2.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
@@ -192,7 +192,7 @@ html {
 }
 
 .second-wavy {
-  background-image: url("/ASSETS/background/wavy2-v1.svg");
+  background-image: url("../ASSETS/background/wavy2-v1.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -212,7 +212,7 @@ html {
 }
 
 #contact {
-  background-image: url("/ASSETS/background/contact-bg.svg");
+  background-image: url("../ASSETS/background/contact-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -263,7 +263,7 @@ html {
   }
   50% {
     opacity: 0.5;
-    background-color: none;
+    background-color: transparent;
     top: -100px;
     position: static;
   }

@@ -12,5 +12,6 @@
     <orderEntry type="library" name="imagehover.css" level="application" />
     <orderEntry type="library" name="waypoints" level="application" />
     <orderEntry type="library" name="wow" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
   </component>
 </module>
