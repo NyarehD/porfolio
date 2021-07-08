@@ -7,7 +7,7 @@ $(document).ready(function () {
   let previousSection;
   
   // For Navbar to be revealed when scrolling up and hide when scrolling down
-  $(window).scroll(function (event) {
+  $(window).scroll(function () {
     let current = $(this).scrollTop();
     
     // To hide navbar while in header section whether scrolling up or down
