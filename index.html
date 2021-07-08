@@ -1,66 +1,9 @@
 <!doctype html>
 <html lang="en">
-  <div class="loader-container" style="
-    display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #1a2238;
-      height: 100vh;
-      width: 100vw;
-      position: fixed;
-      z-index: 1000;
-      ">
-    <div class="lds-facebook">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
 
 <head>
-  <style>
-    body{
-      overflow: hidden;
-    }
-    .lds-facebook {
-      display: inline-block;
-      position: relative;
-      width: 80px;
-      height: 80px;
-    }
-    .lds-facebook div {
-      display: inline-block;
-      position: absolute;
-      left: 8px;
-      width: 16px;
-      background: #ff6a3d;
-      animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-    }
-    .lds-facebook div:nth-child(1) {
-      left: 8px;
-      animation-delay: -0.24s;
-    }
-    .lds-facebook div:nth-child(2) {
-      left: 32px;
-      animation-delay: -0.12s;
-    }
-    .lds-facebook div:nth-child(3) {
-      left: 56px;
-      animation-delay: 0;
-    }
-    @keyframes lds-facebook {
-      0% {
-        top: 8px;
-        height: 64px;
-      }
-      50%,
-      100% {
-        top: 24px;
-        height: 32px;
-      }
-    }
-  </style>
 
+  <meta charset="utf-8">
   <!-- Primary Meta Tags -->
   <title>NyarehD</title>
   <meta name="title" content="NyarehD">
@@ -84,7 +27,6 @@ This is just a project to use my web development skills.">
   <meta property="twitter:image" content="ASSETS/profile/139718525_489893409079775_4635186254791302282a_n-min.jpg">
 
   <!-- Required meta tags -->
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css"
     integrity="sha512-SYBBAnJsPEzSQ/kBqkR/9krJ+EUgF624c8uaMBww1Q26pnCw5k7zVmtc48BfXjZ9MRNNBveIdhx/na1xRLWgjw=="
@@ -103,12 +45,77 @@ This is just a project to use my web development skills.">
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="CSS/portfolio.css">
   <title>Portfolio</title>
-
-
   <!-- Styles for loader animation-->
+
+  <style>
+    body {
+      overflow: hidden;
+    }
+
+    .lds-facebook {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+
+    .lds-facebook div {
+      display: inline-block;
+      position: absolute;
+      left: 8px;
+      width: 16px;
+      background: #ff6a3d;
+      animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    }
+
+    .lds-facebook div:nth-child(1) {
+      left: 8px;
+      animation-delay: -0.24s;
+    }
+
+    .lds-facebook div:nth-child(2) {
+      left: 32px;
+      animation-delay: -0.12s;
+    }
+
+    .lds-facebook div:nth-child(3) {
+      left: 56px;
+      animation-delay: 0s;
+    }
+
+    @keyframes lds-facebook {
+      0% {
+        top: 8px;
+        height: 64px;
+      }
+
+      50%,
+      100% {
+        top: 24px;
+        height: 32px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
+<div class="loader-container" style="
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1a2238;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      z-index: 1000;
+      ">
+  <div class="lds-facebook">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
   <!-- Start of homeParent section-->
   <section class="vh-100" id="homeParent">
     <header class="container-fluid" id="header">
@@ -218,7 +225,8 @@ This is just a project to use my web development skills.">
                   <div class="card rounded-3 h-100">
                     <div class="row g-0">
                       <figure class="imghvr-reveal-up">
-                        <img src="ASSETS/projects/Screenshot 2021-07-01 at 15-21-10 Marketing-min.png" alt="example-image">
+                        <img src="ASSETS/projects/Screenshot 2021-07-01 at 15-21-10 Marketing-min.png"
+                          alt="example-image">
                         <figcaption class="d-flex flex-column justify-content-center align-items-start">
                           <p class="card-text">This project is used to apply all of the knowledge while
                             learning in
@@ -487,10 +495,12 @@ This is just a project to use my web development skills.">
   </section>
   <!-- End of contact section-->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"
-  integrity="sha512-72WD92hLs7T5FAXn3vkNZflWG6pglUDDpm87TeQmfSg8KnrymL2G30R7as4FmTwhgu9H7eSzDCX3mjitSecKnw=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-72WD92hLs7T5FAXn3vkNZflWG6pglUDDpm87TeQmfSg8KnrymL2G30R7as4FmTwhgu9H7eSzDCX3mjitSecKnw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
     integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
