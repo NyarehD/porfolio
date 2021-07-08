@@ -98,6 +98,7 @@ html {
       font-size: 1.3rem;
       padding: 0.25em;
       isolation: isolate;
+      // For active link
       .nav-link.f-orangy {
         position: relative;
         isolation: isolate;
@@ -124,6 +125,7 @@ html {
           }
         }
       }
+      // For none active link
       .nav-link {
         position: relative;
         color: white;
