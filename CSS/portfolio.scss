@@ -1,0 +1,336 @@
+// Assets
+$transparency-for-me: rgba(95, 95, 95, 0.342);
+$t-shadow: 0 1px 2px #1a1e21;
+$b-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.233) !important;
+
+// Colors
+$golden: #daa520;
+$midnight: #1a2238;
+$twilight: #29375b;
+$purple-light: #9daaf2;
+$purple-dark: #838ecf;
+$orangy: #ff6a3d;
+$sandy: #f4db7d;
+
+// Universal Class
+.f-large {
+  font-size: calc(1.375rem + 7vw);
+}
+.f-medium {
+  font-size: calc(1.375rem+ 4vw);
+}
+.isolate {
+  isolation: isolate;
+}
+.mix-blend-difference {
+  mix-blend-mode: difference;
+}
+.f-midnight {
+  color: $midnight;
+}
+.f-twilight {
+  color: $twilight;
+}
+.f-orangy {
+  color: $orangy !important;
+}
+.f-purple-light {
+  color: $purple-light;
+}
+.f-purple-dark {
+  color: $purple-dark;
+}
+.f-sandy {
+  color: $sandy;
+}
+.font-weight-5 {
+  font-weight: 500;
+}
+.font-weight-4 {
+  font-weight: 400;
+}
+.font-weight-3 {
+  font-weight: 300;
+}
+.p-for-not-nav {
+  padding-top: 100px;
+}
+
+// Background function
+@mixin backgroundImage($url, $size, $position, $attachment: scroll) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $position;
+  background-attachment: $attachment;
+}
+
+// Start of document styles
+* {
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+}
+html {
+  overflow-x: hidden;
+  background: $midnight;
+}
+
+// Section combination of nav bar and welcome
+#homeParent {
+  @include backgroundImage("/ASSETS/background/secondbackground.svg", cover, center, fixed);
+}
+
+// Header
+#header {
+  z-index: 1000;
+  margin: 0 !important;
+  &.b-shadow {
+    box-shadow: $b-shadow;
+  }
+  // Navbar
+  nav {
+    /* Header > navbar */
+    .navbar-brand {
+      font-size: 2rem;
+    }
+    .nav-item {
+      font-size: 1.3rem;
+      padding: 0.25em;
+      isolation: isolate;
+      // For active link
+      .nav-link.f-orangy {
+        position: relative;
+        isolation: isolate;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          transform: scaleY(0.05);
+          transform-origin: 0 100%;
+          transition: transform 0.25s;
+          mix-blend-mode: difference;
+          background-color: currentColor;
+        }
+        &:focus {
+          outline: none;
+        }
+        &:focus,
+        &:hover {
+          &::before {
+            transform: none;
+          }
+        }
+      }
+      // For none active link
+      .nav-link {
+        position: relative;
+        color: white;
+        &::before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          content: "";
+          transform: scaleY(0);
+          background-color: currentColor;
+          mix-blend-mode: difference;
+          transition: transform 0.25s;
+        }
+        &:focus{
+          outline: none;
+        }
+        &:focus, &:hover{
+          &::before{
+            transform: none;
+          }
+        }
+      }
+    }
+    // For small device navigation
+    #navbarNav.show, #navbarNav.collapsing{
+      ul{
+        align-items: center;
+        .nav-item{
+          width: 30%;
+          .nav-link{
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  // For Navbar animation
+  &.toFixedShow {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $midnight;
+    z-index: 100;
+    width: 100vw;
+    animation-name: slideInShow;
+    animation-duration: 0.75s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.15, 0.82, 0.83, 0.94);
+    animation-direction: normal;
+  }
+  &.toFixedHide {
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 0;
+    z-index: 100;
+    width: 100vw;
+    animation-name: slideOutHide;
+    animation-duration: 0.75s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+  }
+}
+
+// Projects
+#projects {
+  @include backgroundImage("/ASSETS/background/wavy1-v2.svg", contain, bottom, scroll);
+  background-color: #fffffa;
+  .project-cards {
+    z-index: 10;
+    .languageList,
+    .frameworkList {
+      font-size: 1em;
+    }
+    .github-project-link-icon {
+      height: 15px;
+    }
+  }
+}
+
+.second-wavy {
+  @include backgroundImage("/ASSETS/background/wavy2-v1.svg", cover, top);
+  height: 100px;
+}
+
+// About
+#about {
+  .about-me {
+    min-height: 60vh;
+  }
+  .profile-img {
+    max-width: 100%;
+  }
+}
+
+// Path
+#path {
+  background-color: $midnight;
+}
+
+// Contact
+#contact {
+  @include backgroundImage("/ASSETS/background/contact-bg.svg", cover, top);
+  min-height: 40vh;
+  padding: 6vw 0 1vw;
+  .social-table,
+  .contact-table {
+    tr {
+      height: 40px;
+      margin-bottom: 100px;
+      td {
+        svg {
+          height: 35px;
+        }
+        a {
+          position: relative;
+          padding: 0 10px;
+          text-align: left;
+        }
+      }
+      &:hover {
+        td > a {
+          color: $orangy;
+          transition: 0.3s;
+        }
+        td > svg path {
+          fill: $orangy;
+          transition: 0.3s;
+        }
+      }
+    }
+    .contact-icons {
+      height: 30px;
+    }
+  }
+
+  .contact-link {
+    color: white;
+    text-decoration: $orangy;
+    text-decoration-line: blink;
+  }
+}
+
+// For navbar animation
+@keyframes slideOutHide {
+  0% {
+    position: fixed;
+    background-color: $midnight;
+    z-index: 1000;
+  }
+  50% {
+    opacity: 0.5;
+    background-color: none;
+    top: -100px;
+    position: static;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideInShow {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+// End of document
+
+// For img-hover library
+[class*=" imghvr-"] figcaption,
+[class^="imghvr-"] figcaption {
+  background-color: #1a2238e0;
+}
+figure.imghvr-reveal-up::before {
+  background-color: #29375b9f;
+}
+
+// For slick js
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  z-index: 50;
+  height: auto;
+  margin: 0 10px;
+  div {
+    height: 100%;
+  }
+}
+
+// Color of the dot
+.slick-dots li.slick-active button:before {
+  color: $orangy;
+}
+
+.slick-dots li button::before {
+  color: white;
+}
