@@ -3,7 +3,7 @@ $transparency-for-me: rgba(95, 95, 95, 0.342);
 $t-shadow: 0 1px 2px #1a1e21;
 $b-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.233) !important;
 
-/* Colors */
+// Colors
 $golden: #daa520;
 $midnight: #1a2238;
 $twilight: #29375b;
@@ -11,9 +11,8 @@ $purple-light: #9daaf2;
 $purple-dark: #838ecf;
 $orangy: #ff6a3d;
 $sandy: #f4db7d;
-$primary-bg-color: #1a2238;
 
-/* Universal Class */
+// Universal Class
 .f-large {
   font-size: calc(1.375rem + 7vw);
 }
@@ -151,6 +150,18 @@ html {
         }
       }
     }
+    // For small device navigation
+    #navbarNav.show, #navbarNav.collapsing{
+      ul{
+        align-items: center;
+        .nav-item{
+          width: 30%;
+          .nav-link{
+            text-align: center;
+          }
+        }
+      }
+    }
   }
   // For Navbar animation
   &.toFixedShow {
@@ -215,7 +226,7 @@ html {
 
 // Path
 #path {
-  background-color: $primary-bg-color;
+  background-color: $midnight;
 }
 
 // Contact
@@ -227,6 +238,7 @@ html {
   .contact-table {
     tr {
       height: 40px;
+      margin-bottom: 100px;
       td {
         svg {
           height: 35px;
@@ -240,9 +252,11 @@ html {
       &:hover {
         td > a {
           color: $orangy;
+          transition: 0.3s;
         }
         td > svg path {
           fill: $orangy;
+          transition: 0.3s;
         }
       }
     }

@@ -1,16 +1,15 @@
 $(document).ready(function () {
   // For animation to be activated when user reaches the content
   new WOW().init();
-
   /**
    * Global variable for scrolling up or down
    */
   let previousSection;
-
+  
   // For Navbar to be revealed when scrolling up and hide when scrolling down
   $(window).scroll(function (event) {
     let current = $(this).scrollTop();
-
+    
     // To hide navbar while in header section whether scrolling up or down
     if ((this.innerHeight * 0.9) >= current) {
       $('#header').addClass("toFixedHide").removeClass("toFixedShow b-shadow")
@@ -30,7 +29,7 @@ $(document).ready(function () {
     }
     previousSection = $(this).scrollTop();
   })
-
+  
   // For changing active link color in Navbar
   function setActiveWhileScrolling() {
     let sections = $("section[id]");// For selecting section elements with id attributes
@@ -52,7 +51,7 @@ $(document).ready(function () {
     }
   }
   setActiveWhileScrolling();
-
+  
   // For slick js which is used for project cards carousel
   $('.project-cards').slick({
     arrows: false,
@@ -82,5 +81,13 @@ $(document).ready(function () {
     ]
   });
 })
+
+// For loader at the beginning to be removed when the page is ready
+$(window).on("load",function () {
+  $(".loader-container").fadeOut(1000, function () {
+    $(this).remove();
+  })
+})
+
 
 
