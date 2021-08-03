@@ -8,6 +8,7 @@ $(window).on("load", function () {
 $(document).ready(function () {
   // For animation to be activated when user reaches the content
   new WOW().init();
+
   /**
    * Global variable for scrolling up or down
    */
