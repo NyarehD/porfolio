@@ -53,11 +53,13 @@ $(document).ready(function () {
     }, {
       offset: "-100%"
     })
+
     function setActiveInNavBar(currentSectionId) {
       $(".nav-link").removeClass("f-orangy");
       $(`.nav-link[href='#${currentSectionId}']`).addClass("f-orangy")
     }
   }
+
   setActiveWhileScrolling();
 
   // For slick js which is used for project cards carousel
@@ -87,14 +89,18 @@ $(document).ready(function () {
         }
       }
     ]
-  });
+ });
 
-  // Fix the issue where navbar links remain appear after clicking the link in sm devices
+// To hide navbar after click links which needs to scroll up which might block some contents
   $(".nav-link").on("click", function () {
+    // To fix the issue where navbar links remains toggled down after clicking the link in sm devices
     if (window.innerWidth < 768) {
       $("button.navbar-toggler").click();
     }
-  });
+    setTimeout(function () {
+      $('#header').addClass("toFixedHide").removeClass("toFixedShow b-shadow")
+    }, 600);
+  })
 })
 
 
