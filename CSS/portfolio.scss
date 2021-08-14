@@ -176,7 +176,6 @@ html {
   // For Navbar animation
   &.toFixedShow {
     position: fixed;
-    top: 0;
     right: 0;
     left: 0;
     background-color: $midnight;
@@ -190,10 +189,8 @@ html {
   }
   &.toFixedHide {
     top: 0;
-    right: 0;
-    left: 0;
     margin-top: 0;
-    z-index: 100;
+    z-index: 100000;
     width: 100vw;
     animation-name: slideOutHide;
     animation-duration: 0.75s;
