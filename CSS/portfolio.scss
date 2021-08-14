@@ -72,6 +72,32 @@ $sandy: #f4db7d;
   background-attachment: $attachment;
 }
 
+// mix blend mode effect in nav bar
+@mixin mixBlendModeEffect($fontColor,$transformScaleY,$transformOrigin) {
+  position: relative;
+  isolation: isolate;
+  color: $fontColor;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    mix-blend-mode: difference;
+    transition: transform 0.25s;
+    background-color: currentColor;
+    transform: scaleY($transformScaleY);
+    transform-origin: $transformOrigin;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus,
+  &:hover {
+    &::before {
+      transform: none;
+    }
+  }
+}
+
 // Start of document styles
 * {
   font-family: "Ubuntu", sans-serif;
@@ -109,55 +135,11 @@ html {
       isolation: isolate;
       // For active link
       .nav-link.f-orangy {
-        position: relative;
-        isolation: isolate;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          transform: scaleY(0.05);
-          transform-origin: 0 100%;
-          transition: transform 0.25s;
-          mix-blend-mode: difference;
-          background-color: currentColor;
-        }
-        &:focus {
-          outline: none;
-        }
-        &:focus,
-        &:hover {
-          &::before {
-            transform: none;
-          }
-        }
+        @include mixBlendModeEffect(currentColor,0.05,0 100%);
       }
       // For none active link
       .nav-link {
-        position: relative;
-        color: white;
-        &::before {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          content: "";
-          transform: scaleY(0);
-          background-color: currentColor;
-          mix-blend-mode: difference;
-          transition: transform 0.25s;
-        }
-        &:focus{
-          outline: none;
-        }
-        &:focus, &:hover{
-          &::before{
-            transform: none;
-          }
-        }
+        @include mixBlendModeEffect(white, 0, 0);
       }
     }
     // For small device navigation

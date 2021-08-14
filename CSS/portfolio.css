@@ -111,25 +111,23 @@ html {
 #header nav .nav-item .nav-link.f-orangy {
   position: relative;
   isolation: isolate;
+  color: currentColor;
 }
 
 #header nav .nav-item .nav-link.f-orangy::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-transform: scaleY(0.05);
-          transform: scaleY(0.05);
-  -webkit-transform-origin: 0 100%;
-          transform-origin: 0 100%;
+  inset: 0;
+  mix-blend-mode: difference;
   -webkit-transition: -webkit-transform 0.25s;
   transition: -webkit-transform 0.25s;
   transition: transform 0.25s;
   transition: transform 0.25s, -webkit-transform 0.25s;
-  mix-blend-mode: difference;
   background-color: currentColor;
+  -webkit-transform: scaleY(0.05);
+          transform: scaleY(0.05);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
 }
 
 #header nav .nav-item .nav-link.f-orangy:focus {
@@ -143,24 +141,24 @@ html {
 
 #header nav .nav-item .nav-link {
   position: relative;
+  isolation: isolate;
   color: white;
 }
 
 #header nav .nav-item .nav-link::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
   content: "";
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  background-color: currentColor;
+  position: absolute;
+  inset: 0;
   mix-blend-mode: difference;
   -webkit-transition: -webkit-transform 0.25s;
   transition: -webkit-transform 0.25s;
   transition: transform 0.25s;
   transition: transform 0.25s, -webkit-transform 0.25s;
+  background-color: currentColor;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
 }
 
 #header nav .nav-item .nav-link:focus {
