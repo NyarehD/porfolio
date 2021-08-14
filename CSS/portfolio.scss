@@ -12,12 +12,19 @@ $purple-dark: #838ecf;
 $orangy: #ff6a3d;
 $sandy: #f4db7d;
 
+
 // Universal Class
 .f-large {
   font-size: calc(1.375rem + 7vw);
 }
 .f-medium {
-  font-size: calc(1.375rem+ 4vw);
+  font-size: calc(1.375rem + 4vw);
+}
+.f-small{
+  font-size: calc(1.375rem + 1.5vw);
+}
+.f-xsmall{
+  font-size: calc(1.375rem + 1vw);
 }
 .isolate {
   isolation: isolate;
@@ -65,6 +72,32 @@ $sandy: #f4db7d;
   background-attachment: $attachment;
 }
 
+// mix blend mode effect in nav bar
+@mixin mixBlendModeEffect($fontColor,$transformScaleY,$transformOrigin) {
+  position: relative;
+  isolation: isolate;
+  color: $fontColor;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    mix-blend-mode: difference;
+    transition: transform 0.25s;
+    background-color: currentColor;
+    transform: scaleY($transformScaleY);
+    transform-origin: $transformOrigin;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus,
+  &:hover {
+    &::before {
+      transform: none;
+    }
+  }
+}
+
 // Start of document styles
 * {
   font-family: "Ubuntu", sans-serif;
@@ -92,6 +125,9 @@ html {
     /* Header > navbar */
     .navbar-brand {
       font-size: 2rem;
+      .logo{
+        height: calc(1.375rem + 1vw);
+      }
     }
     .nav-item {
       font-size: 1.3rem;
@@ -99,55 +135,11 @@ html {
       isolation: isolate;
       // For active link
       .nav-link.f-orangy {
-        position: relative;
-        isolation: isolate;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          transform: scaleY(0.05);
-          transform-origin: 0 100%;
-          transition: transform 0.25s;
-          mix-blend-mode: difference;
-          background-color: currentColor;
-        }
-        &:focus {
-          outline: none;
-        }
-        &:focus,
-        &:hover {
-          &::before {
-            transform: none;
-          }
-        }
+        @include mixBlendModeEffect(currentColor,0.05,0 100%);
       }
       // For none active link
       .nav-link {
-        position: relative;
-        color: white;
-        &::before {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          content: "";
-          transform: scaleY(0);
-          background-color: currentColor;
-          mix-blend-mode: difference;
-          transition: transform 0.25s;
-        }
-        &:focus{
-          outline: none;
-        }
-        &:focus, &:hover{
-          &::before{
-            transform: none;
-          }
-        }
+        @include mixBlendModeEffect(white, 0, 0);
       }
     }
     // For small device navigation
@@ -166,7 +158,6 @@ html {
   // For Navbar animation
   &.toFixedShow {
     position: fixed;
-    top: 0;
     right: 0;
     left: 0;
     background-color: $midnight;
@@ -180,10 +171,8 @@ html {
   }
   &.toFixedHide {
     top: 0;
-    right: 0;
-    left: 0;
     margin-top: 0;
-    z-index: 100;
+    z-index: 100000;
     width: 100vw;
     animation-name: slideOutHide;
     animation-duration: 0.75s;

@@ -1,0 +1,31 @@
+{
+  "name": "porfolio",
+  "version": "1.0.0",
+  "description": "I wrote this portfolio as a project.😄",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NyarehD/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NyarehD/portfolio/issues"
+  },
+  "homepage": "https://github.com/NyarehD/portfolio#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.9.3",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.1.0",
+    "imagehover.css": "^2.0.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1",
+    "slick-carousel": "^1.8.1",
+    "waypoints": "^4.0.1",
+    "wow.js": "^1.2.2"
+  }
+}
