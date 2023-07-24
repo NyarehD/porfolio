@@ -1,5 +1,5 @@
 <template>
-  <li class="nav-link text-primary hover:cursor-pointer p-2 text-lg"
+  <li class="nav-link text-primary hover:cursor-pointer md:px-3 p-2 text-lg select-none"
     :class="{ 'active text-primary before:bg-primary': isActive, 'text-whity before:bg-whity': !isActive }">
     <NuxtLink :to="props.to">
       <slot />
