@@ -15,14 +15,31 @@
       </div>
     </div>
   </nav>
+  <!-- This is collapsed navbar options in small device -->
+  <Transition name="slide">
+    <div class="bg-priBg md:hidden z-10 px-8 py-3" v-if="isNavShown">
+      <ul class="lg:space-x-5 flex flex-col w-full mx-auto space-y-2 align-baseline">
         <NavLink :route-name="route.name" to="index">Home</NavLink>
         <NavLink :route-name="route.name" to="projects">Projects</NavLink>
         <NavLink :route-name="route.name" to="about">About</NavLink>
+      </ul>
+    </div>
+  </Transition>
 </template>
 <script setup lang="ts">
   let isNavShown = ref(false);
   let route = useRoute();
 </script>
 <style lang="scss">
-  // mix blend mode effect in nav bar
+  .slide-enter-active,
+  .slide-leave-active {
+    transform: translateY(0);
+    transition: 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+  }
+
+  .slide-enter-from,
+  .slide-leave-to {
+    transform: translateY(-100%);
+    transition: 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+  }
 </style>
