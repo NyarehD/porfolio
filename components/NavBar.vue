@@ -1,17 +1,16 @@
 <template>
-  <nav>
-    <div class="bg-priBg container mx-auto">
-      <div class=" flex justify-between px-10 py-3">
-        <div class="">
-          <img src="~/assets/images/logo.png" alt="" class="h-12">
-        </div>
-        <div class="">
-          <ul class=" flex justify-between space-x-6">
+  <nav class="bg-priBg sticky top-0 z-20">
+    <div class="md:px-12 lg:px-16 flex justify-between px-8 py-3">
+      <div class="">
+        <img src="~/assets/images/logo.png" alt="" class="h-12">
+      </div>
+      <div class="md:block hidden">
+        <ul class="md:space-x-2 lg:space-x-5 flex justify-between">
           <NavLink :route-name="route.name" to="index">Home</NavLink>
           <NavLink :route-name="route.name" to="projects">Projects</NavLink>
           <NavLink :route-name="route.name" to="about">About</NavLink>
-          </ul>
-        </div>
+        </ul>
+      </div>
       <div class="md:hidden flex flex-col justify-center">
         <button @click="isNavShown = !isNavShown"
           class="text-whity ring-1 hover:ring-primary ring-whity px-3 py-2 rounded-md"
