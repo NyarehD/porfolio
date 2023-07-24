@@ -12,6 +12,12 @@
           <NavLink :route-name="route.name" to="about">About</NavLink>
           </ul>
         </div>
+      <div class="md:hidden flex flex-col justify-center">
+        <button @click="isNavShown = !isNavShown"
+          class="text-whity ring-1 hover:ring-primary ring-whity px-3 py-2 rounded-md"
+          :class="{ 'ring-primary': isNavShown }">
+          <NavHam class="h-8" />
+        </button>
       </div>
     </div>
   </nav>
