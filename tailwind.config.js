@@ -13,9 +13,11 @@ module.exports = {
       colors: {
         primary: '#FF6A3D',
         secondary: '#F4DB7D',
+        ternary: '#9DAAF2',
         priBg: '#1A2238',
         secBg: '#29375B',
         whity:'#F8F8FB'
+
       }
     },
   },

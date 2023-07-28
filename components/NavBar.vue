@@ -14,8 +14,8 @@
       </div>
       <div class="md:hidden flex flex-col justify-center">
         <button @click="isNavShown = !isNavShown"
-          class="text-whity ring-1 hover:ring-primary ring-whity px-3 py-2 rounded-md"
-          :class="{ 'ring-primary': isNavShown }">
+          class="text-whity ring-1 hover:ring-primary px-3 py-2 duration-150 rounded-md"
+          :class="{ 'ring-primary ring-2': isNavShown, 'ring-whity': !isNavShown }">
           <NavHam class="h-8" />
         </button>
       </div>
@@ -45,8 +45,6 @@
   let windowScrollY = computed(() => {
     return windowScroll.y.value > 500;
   })
-
-  let windowSize = useWindowSize();
 </script>
 <style lang="scss">
   .slide-enter-active,
@@ -64,13 +62,13 @@
   .fade-enter-active,
   .fade-leave-active {
     opacity: 1;
-    transition: 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+    transition: 0.75s cubic-bezier(0.36, 0.07, 0.19, 0.97);
   }
 
   .fade-enter-from,
   .fade-leave-to {
     opacity: 0;
-    transition: 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+    transition: 0.75s cubic-bezier(0.36, 0.07, 0.19, 0.97);
   }
 
   .navBarAppear {
