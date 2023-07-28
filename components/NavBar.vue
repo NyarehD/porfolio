@@ -6,7 +6,7 @@
         <img src="~/assets/images/logo.png" alt="" class="h-12">
       </div>
       <div class="md:block hidden">
-        <ul class="md:space-x-2 lg:space-x-5 flex justify-between">
+        <ul class="md:space-x-3 lg:space-x-6 flex justify-between">
           <NavLink :route-name="route.name">Home</NavLink>
           <NavLink :route-name="route.name" to="projects">Projects</NavLink>
           <NavLink :route-name="route.name" to="about">About</NavLink>
@@ -37,6 +37,9 @@
 
   let isNavShown = ref(false);
   let route = useRoute();
+
+  let router = useRouter();
+  router.afterEach(() => isNavShown.value = false)
 
   let windowScroll = useWindowScroll();
   let windowScrollY = computed(() => {
