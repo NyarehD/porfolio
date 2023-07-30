@@ -3,7 +3,9 @@
     <div class="md:px-12 lg:px-16 relative z-40 flex justify-between px-8 py-3"
       :class="{ 'bg-transparent': !windowScrollY, 'bg-priBg': windowScrollY || isNavShown }">
       <div class="">
-        <img src="~/assets/images/logo.png" alt="" class="h-12">
+        <NuxtLink to="/">
+          <img src="~/assets/images/logo.png" alt="" class="h-12">
+        </NuxtLink>
       </div>
       <div class="md:block hidden">
         <ul class="md:space-x-3 lg:space-x-6 flex justify-between">
