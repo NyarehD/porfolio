@@ -1,6 +1,6 @@
 <template>
-  <nav class=" top-0 w-full" ref="navbar" :class="{ 'navBarHide': !windowScrollY, 'navBarAppear': windowScrollY }">
-    <div class="md:px-12 lg:px-16 relative z-40 flex justify-between px-8 py-3"
+  <nav class=" top-0 z-10 w-full" ref="navbar" :class="{ 'navBarHide': !windowScrollY, 'navBarAppear': windowScrollY }">
+    <div class="md:px-12 lg:px-16 relative flex justify-between px-8 py-3"
       :class="{ 'bg-transparent': !windowScrollY, 'bg-priBg': windowScrollY || isNavShown }">
       <div class="">
         <NuxtLink to="/">
