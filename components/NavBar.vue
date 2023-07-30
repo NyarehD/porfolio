@@ -23,9 +23,9 @@
       </div>
     </div>
     <!-- This is collapsed navbar options in small device -->
-    <Transition :name="windowScrollY ? 'slide' : 'fade'">
-      <div class=" md:hidden -z-10 px-8 py-3"
-        :class="{ 'bg-transparent': !windowScrollY, 'bg-priBg': windowScrollY || isNavShown }" v-if="isNavShown">
+    <Transition name="slide">
+      <div class=" md:hidden relative z-10 px-8 py-3"
+        :class="{ 'bg-transparent': !windowScrollY, 'bg-priBg': windowScrollY || isNavShown }" v-show="isNavShown">
         <ul class="lg:space-x-5 flex flex-col w-full mx-auto space-y-2 align-baseline">
           <NavLink :route-name="route.name">Home</NavLink>
           <NavLink :route-name="route.name" to="projects">Projects</NavLink>
@@ -51,26 +51,16 @@
 <style lang="scss">
   .slide-enter-active,
   .slide-leave-active {
+    opacity: 1;
     transform: translateY(0);
     transition: 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97);
   }
 
   .slide-enter-from,
   .slide-leave-to {
+    opacity: 0;
     transform: translateY(-100%);
     transition: 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97);
-  }
-
-  .fade-enter-active,
-  .fade-leave-active {
-    opacity: 1;
-    transition: 0.75s cubic-bezier(0.36, 0.07, 0.19, 0.97);
-  }
-
-  .fade-enter-from,
-  .fade-leave-to {
-    opacity: 0;
-    transition: 0.75s cubic-bezier(0.36, 0.07, 0.19, 0.97);
   }
 
   .navBarAppear {
