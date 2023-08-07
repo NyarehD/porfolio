@@ -1,7 +1,7 @@
 <template>
   <nav class=" top-0 z-10 w-full" ref="navbar" :class="{ 'navBarHide': !windowScrollY, 'navBarAppear': windowScrollY }">
     <div class="md:px-12 lg:px-16 relative flex justify-between px-8 py-3"
-      :class="{ 'bg-transparent': !windowScrollY, 'bg-priBg': windowScrollY || isNavShown }">
+      :class="{ 'bg-transparent': isNavTransparent, 'bg-priBg': windowScrollY || isNavShown || route.name !== 'index' }">
       <div class="">
         <NuxtLink to="/">
           <img src="~/assets/images/logo.png" alt="" class="h-12">
@@ -25,7 +25,8 @@
     <!-- This is collapsed navbar options in small device -->
     <Transition name="slide">
       <div class=" md:hidden relative z-10 px-8 py-3"
-        :class="{ 'bg-transparent': !windowScrollY, 'bg-priBg': windowScrollY || isNavShown }" v-show="isNavShown">
+        :class="{ 'bg-transparent': isNavTransparent, 'bg-priBg': windowScrollY || isNavShown || route.name !== 'index' }"
+        v-show="isNavShown">
         <ul class="lg:space-x-5 flex flex-col w-full mx-auto space-y-2 align-baseline">
           <NavLink :route-name="route.name">Home</NavLink>
           <NavLink :route-name="route.name" to="projects">Projects</NavLink>
@@ -47,6 +48,8 @@
   let windowScrollY = computed(() => {
     return windowScroll.y.value > 500;
   })
+
+  let isNavTransparent = computed(() => !windowScrollY && route.name === "index");
 </script>
 <style lang="scss">
   .slide-enter-active,
