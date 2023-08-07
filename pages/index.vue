@@ -13,9 +13,7 @@
         <span class="text-primary md:text-7xl text-4xl font-normal">a web developer</span>
       </div>
     </div>
-    <div
-      class="w-[45px] h-[45px] bg-secBg absolute bottom-4 left-0 right-0 mx-auto p-2 flex justify-center animate-bounce">
-      <ArrowDown class="text-secondary" />
+    <ArrowButton class="text-secondary animate-bounce bottom-4 bg-secBg absolute left-0 right-0" />
     </div>
   </div>
 </template>
