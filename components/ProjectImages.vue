@@ -5,17 +5,18 @@
         fit="cover" class=" md:object-contain object-cover h-full mx-auto select-none" />
     </Transition>
     <template v-if="props.photos.length > 1">
-      <button class="top-1/2 left-5 absolute -translate-y-full"
-        @click.prevent="() => currentPhotoId > 0 && currentPhotoId--">
+      <button class="top-1/2 left-5 hover:scale-105 absolute duration-300 -translate-y-full"
+        @click.prevent="() => currentPhotoId > 0 && currentPhotoId--" v-show="currentPhotoId > 0">
         <ArrowButton class="bg-primary text-whity rotate-90" />
       </button>
-      <button class="top-1/2 right-5 absolute -translate-y-full"
-        @click="() => currentPhotoId < props.photos.length - 1 && currentPhotoId++">
+      <button class="top-1/2 hover:scale-105 right-5 absolute duration-300 -translate-y-full"
+        @click="() => currentPhotoId < props.photos.length - 1 && currentPhotoId++"
+        v-show="currentPhotoId < props.photos.length - 1">
         <ArrowButton class="bg-primary text-whity -rotate-90" />
       </button>
       <div class="left-1/2 absolute bottom-0 flex -translate-x-1/2">
-        <div v-for="(photo, i) in photos.length" :key="photo" class=" w-3 h-3 m-3 cursor-pointer"
-          :class="{ 'bg-primary': i === currentPhotoId, 'bg-whity': i !== currentPhotoId }"
+        <div v-for="(photo, i) in photos.length" :key="photo" class="hover:scale-[1.3] w-3 h-3 m-3 duration-300"
+          :class="{ 'bg-primary': i === currentPhotoId, 'bg-whity cursor-pointer': i !== currentPhotoId }"
           @click="() => currentPhotoId = i">
         </div>
       </div>
