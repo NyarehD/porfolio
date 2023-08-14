@@ -30,8 +30,14 @@
   const props = defineProps<{
     photos: Project["photos"],
   }>()
+
   // For photo carousel
   let currentPhotoId = ref(0);
+
+  // Reset state when props change
+  watch(() => props.photos, () => {
+    currentPhotoId.value = 0;
+  });
 
 </script>
 
