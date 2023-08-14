@@ -1,18 +1,19 @@
 <template>
-  <NuxtLink :to="props.to || '/'" prefetch
+  <NuxtLink :to="{ name: props.to, path: props.to || '/' }" prefetch
     :class="{ 'active text-primary before:bg-primary': isActive, 'text-whity before:bg-whity': !isActive }"
     class="nav-link hover:cursor-pointer md:px-3 p-2 text-lg">
     <slot />
   </NuxtLink>
 </template>
 <script setup lang="ts">
-  import { RouteRecordName } from '.nuxt/vue-router';
+
+  let route = useRoute();
 
   let props = defineProps<{
     to?: string,
-    routeName: RouteRecordName | null | undefined
   }>();
-  let isActive = computed(() => props.routeName === (props.to || "index"))
+  let isActive = computed(() => route.name === (props.to || "index"))
+
 </script>
 <style lang="scss" scoped>
   // mix blend mode effect in nav bar

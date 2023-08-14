@@ -9,9 +9,9 @@
       </div>
       <div class="md:block hidden">
         <ul class="md:space-x-3 lg:space-x-6 flex justify-between">
-          <NavLink :route-name="route.name">Home</NavLink>
-          <NavLink :route-name="route.name" to="/projects">Projects</NavLink>
-          <NavLink :route-name="route.name" to="/about">About</NavLink>
+          <NavLink>Home</NavLink>
+          <NavLink to="projects">Projects</NavLink>
+          <NavLink to="about">About</NavLink>
         </ul>
       </div>
       <div class="md:hidden flex flex-col justify-center">
@@ -28,9 +28,9 @@
         :class="{ 'bg-transparent': isNavTransparent, 'bg-priBg': windowScrollY || isNavShown || route.name !== 'index' }"
         v-show="isNavShown">
         <ul class="lg:space-x-5 flex flex-col w-full mx-auto space-y-2 align-baseline">
-          <NavLink :route-name="route.name">Home</NavLink>
-          <NavLink :route-name="route.name" to="/projects">Projects</NavLink>
-          <NavLink :route-name="route.name" to="/about">About</NavLink>
+          <NavLink>Home</NavLink>
+          <NavLink to="projects">Projects</NavLink>
+          <NavLink to="about">About</NavLink>
         </ul>
       </div>
     </Transition>
