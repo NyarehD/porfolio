@@ -1,24 +1,24 @@
 <template>
   <nav class=" top-0 z-10 w-full" ref="navbar" :class="{ 'navBarHide': !windowScrollY, 'navBarAppear': windowScrollY }">
-    <div class="md:px-12 lg:px-16 relative flex justify-between px-8 py-3"
+    <div class="md:px-12 lg:px-16 md:py-3 relative flex justify-between px-8 py-2"
       :class="{ 'bg-transparent': isNavTransparent, 'bg-priBg': windowScrollY || isNavShown || route.name !== 'index' }">
       <div class="">
         <NuxtLink to="/">
-          <img src="~/assets/images/logo.png" alt="" class="h-12">
+          <img src="~/assets/images/logo.png" alt="" class="md:h-12 h-9">
         </NuxtLink>
       </div>
       <div class="md:block hidden">
         <ul class="md:space-x-3 lg:space-x-6 flex justify-between">
           <NavLink :route-name="route.name">Home</NavLink>
-          <NavLink :route-name="route.name" to="projects">Projects</NavLink>
-          <NavLink :route-name="route.name" to="about">About</NavLink>
+          <NavLink :route-name="route.name" to="/projects">Projects</NavLink>
+          <NavLink :route-name="route.name" to="/about">About</NavLink>
         </ul>
       </div>
       <div class="md:hidden flex flex-col justify-center">
         <button @click="isNavShown = !isNavShown"
           class="text-whity ring-1 hover:ring-primary px-3 py-2 duration-150 rounded-md"
           :class="{ 'ring-primary ring-2': isNavShown, 'ring-whity': !isNavShown }">
-          <NavHam class="h-8" />
+          <NavHam class="md:h-8 h-6" />
         </button>
       </div>
     </div>
@@ -29,8 +29,8 @@
         v-show="isNavShown">
         <ul class="lg:space-x-5 flex flex-col w-full mx-auto space-y-2 align-baseline">
           <NavLink :route-name="route.name">Home</NavLink>
-          <NavLink :route-name="route.name" to="projects">Projects</NavLink>
-          <NavLink :route-name="route.name" to="about">About</NavLink>
+          <NavLink :route-name="route.name" to="/projects">Projects</NavLink>
+          <NavLink :route-name="route.name" to="/about">About</NavLink>
         </ul>
       </div>
     </Transition>
