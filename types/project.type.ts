@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   language: string[];
   libraryFramework: string[];
-  link: string;
+  link?: string;
+  github: string;
   photos: string[];
 }

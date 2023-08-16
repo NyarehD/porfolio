@@ -1,13 +1,8 @@
 <template>
   <div class=" pt-[56px] md:pt-[72px] h-screen">
     <div class=" lg:flex-row flex flex-col w-full h-full overflow-auto">
-      <!-- <div class="md:pl-12 lg:pl-16 h-1/2 lg:h-auto bg-secBg lg:w-1/2 w-full py-3 pl-8"> -->
-      <!-- <h1 v-for="photo in projects[currentId].photos" :key="photo" class="text-secondary">{{ photo }}</h1> -->
-
-
-      <!-- </div> -->
       <ProjectImages :photos="projects[currentId].photos" />
-      <div class="bg-whity snap-mandatory snap-y lg:w-1/2 lg:max-h-full lg:h-full h-1/2 overflow-auto">
+      <div class="bg-whity snap-mandatory snap-y lg:w-1/2 lg:max-h-full lg:h-full h-1/2 z-10 overflow-auto">
         <ProjectInfo v-for="(project, i) in  projects " :project="project" :key="i" @current-id="id => currentId = id" />
       </div>
     </div>
@@ -15,9 +10,11 @@
 </template>
 
 <script setup lang="ts">
+  import { Project } from 'types/project.type';
+
   let currentId = ref<number>(1);
 
-  const projects = [
+  const projects: Project[] = [
     {
       id: 0,
       name: "Portfolio",
