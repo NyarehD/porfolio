@@ -17,8 +17,8 @@
   const projects: Project[] = [
     {
       id: 0,
-      name: "Portfolio",
-      description: "Portfolio Website of Nyareh",
+      name: "Old Portfolio",
+      description: "The old portfolio website of Nyareh",
       language: ["HTML", "CSS", "SCSS", "JS"],
       libraryFramework: ["Bootstrap", "jQuery"],
       link: "https://nyarehd.github.io/portfolio",
@@ -27,77 +27,55 @@
     },
     {
       id: 1,
+      name: "Prismatic Next",
+      description: "Full stack application with NEXT.js, with Prisma to get data from PlanetScale, a serverless database",
+      language: ["HTML", "CSS", "JS", "TS"],
+      libraryFramework: ["Tailwind", "React", "Next.js", "Daisy UI", "Prisma", "PlanetScale", "Testing"],
+      github: "https://github.com/NyarehD/prismatic-next",
+      link: "https://prismatic-next-gmeytrbs8-nyarehd.vercel.app",
+      photos: ["prismatic-next-1.png", "prismatic-next-2.png", "prismatic-next-3.png"]
+    },
+    {
+      id: 2,
+      name: "Lalable",
+      description: "A social media website, with Laravel",
+      language: ["HTML", "CSS", "JS", "PHP"],
+      libraryFramework: ["Tailwind", "Laravel", "Vue", "Inertia"],
+      github: "https://github.com/NyarehD/lalable",
+      photos: ["lalable-1.png", "lalable-2.png", "lalable-3.png", "lalable-4.png", "lalable-5.png"]
+    },
+    {
+      id: 2,
+      name: "PokeDex",
+      description: "A pokemon database with Pokemon Api",
+      language: ["HTML", "CSS", "JS", "SASS"],
+      libraryFramework: ["Vue", "Tailwind", "Pinia", "Vue-router", "VueUse"],
+      github: "https://github.com/NyarehD/Pokedex",
+      link: "https://nyarehd.github.io/Pokedex/",
+      photos: ["pokedex-1.png", "pokedex-2.png", "pokedex-3.png", "pokedex-4.png", "pokedex-mobile-1.png", "pokedex-mobile-2.png"]
+    },
+    {
+      id: 4,
+      name: "Marketing Website",
+      description: "A mock project to apply all the knowledge obtained during SWD class",
+      language: ["HTML", "CSS", "JS"],
+      libraryFramework: ["Bootstrap", "FontAwesome", "jQuery", "slick.js", "waypoint.js"],
+      link: "https://nyarehd.github.io/marketing/",
+      github: "https://github.com/NyarehD/marketing",
+      photos: ["marketing-1.png", "marketing-2.png", "marketing-3.png", "marketing-4.png", "marketing-mobile-1.png", "marketing-mobile-2.png", "marketing-mobile-3.png",]
+    },
+    {
+      id: 3,
       name: "Calculator",
       description: "A calculator project written with vanilla Javascript",
       language: ["HTML", "CSS", "JS"],
       libraryFramework: [],
       link: "https://nyarehd.github.io/Calculator",
       github: "https://github.com/NyarehD/Calculator",
-      photos: ["tst.png", "test.png"]
+      photos: ["calculator-1.png", "calculator-2.png"]
     },
-    {
-      id: 2,
-      name: "Test",
-      description: "tesing is script",
-      language: ["HTML", "CSS"],
-      libraryFramework: ["Bootstrap", "Vue"],
-      link: "slkdfja;sldfj.com",
-      photos: ["tst.png", "test.png", "bwahaha.png"]
-    },
-    {
-      id: 3,
-      name: "Test",
-      description: "tesing is script",
-      language: ["HTML", "CSS"],
-      libraryFramework: ["Bootstrap", "Vue"],
-      link: "slkdfja;sldfj.com",
-      photos: ["tst.png", "test.png", "Bootstrap", "Vue"]
-    },
-    {
-      id: 4,
-      name: "Test",
-      description: "tesing is script",
-      language: ["HTML", "CSS"],
-      libraryFramework: ["Bootstrap", "Vue"],
-      link: "slkdfja;sldfj.com",
-      photos: ["tst.png", "test.png", "tst.png", "test.png"]
-    },
-    {
-      id: 5,
-      name: "Test",
-      description: "tesing is script",
-      language: ["HTML", "CSS"],
-      libraryFramework: ["Bootstrap", "Vue"],
-      link: "slkdfja;sldfj.com",
-      photos: ["tst.png", "test.png"]
-    },
-    {
-      id: 6,
-      name: "Test",
-      description: "tesing is script",
-      language: ["HTML", "CSS"],
-      libraryFramework: ["Bootstrap", "Vue"],
-      link: "slkdfja;sldfj.com",
-      photos: ["tst.png", "test.png", "Bootstrap", "Vue"]
-    },
-    {
-      id: 7,
-      name: "Test",
-      description: "tesing is script",
-      language: ["HTML", "CSS"],
-      libraryFramework: ["Bootstrap", "Vue"],
-      link: "slkdfja;sldfj.com",
-      photos: ["tst.png", "test.png"]
-    },
-    {
-      id: 8,
-      name: "Test",
-      description: "tesing is script",
-      language: ["HTML", "CSS"],
-      libraryFramework: ["Bootstrap", "Vue"],
-      link: "slkdfja;sldfj.com",
-      photos: ["tst.png", "test.png"]
-    }
+
+
   ]
 
 
