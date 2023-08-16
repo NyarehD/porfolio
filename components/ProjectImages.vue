@@ -15,8 +15,9 @@
         <ArrowButton class="bg-primary text-whity -rotate-90" />
       </button>
       <div class="left-1/2 absolute bottom-0 flex -translate-x-1/2">
-        <div v-for="(photo, i) in photos.length" :key="photo" class="hover:scale-[1.3] w-3 h-3 m-3 duration-300"
-          :class="{ 'bg-primary': i === currentPhotoId, 'bg-whity cursor-pointer': i !== currentPhotoId }"
+        <div v-for="(photo, i) in photos.length" :key="photo"
+          class="hover:scale-[1.3] w-3 h-3 drop-shadow-md duration-300 m-2 ring-1 ring-primary"
+          :class="{ 'bg-primary': i === currentPhotoId, 'bg-whity border border-primary cursor-pointer': i !== currentPhotoId }"
           @click="() => currentPhotoId = i">
         </div>
       </div>
