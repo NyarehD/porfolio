@@ -45,7 +45,7 @@
       photos: ["lalable-1.png", "lalable-2.png", "lalable-3.png", "lalable-4.png", "lalable-5.png"]
     },
     {
-      id: 2,
+      id: 3,
       name: "PokeDex",
       description: "A pokemon database with Pokemon Api",
       language: ["HTML", "CSS", "JS", "SASS"],
@@ -65,7 +65,7 @@
       photos: ["marketing-1.png", "marketing-2.png", "marketing-3.png", "marketing-4.png", "marketing-mobile-1.png", "marketing-mobile-2.png", "marketing-mobile-3.png",]
     },
     {
-      id: 3,
+      id: 5,
       name: "Calculator",
       description: "A calculator project written with vanilla Javascript",
       language: ["HTML", "CSS", "JS"],
