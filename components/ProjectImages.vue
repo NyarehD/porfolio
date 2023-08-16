@@ -1,7 +1,7 @@
 <template>
   <div class=" h-1/2 lg:h-auto bg-secBg lg:w-1/2 relative w-full">
     <Transition name="carousel" mode="out-in">
-      <NuxtImg :src="`/projects/${photos[currentPhotoId]}`" :alt="photos[currentPhotoId]" sizes="xs:700px xl:800px"
+      <NuxtImg :src="`/projects-img/${photos[currentPhotoId]}`" :alt="photos[currentPhotoId]" sizes="xs:700px xl:800px"
         fit="cover" class=" object-contain h-full mx-auto select-none" />
     </Transition>
     <template v-if="props.photos.length > 1">
