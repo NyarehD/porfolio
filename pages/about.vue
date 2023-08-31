@@ -51,7 +51,9 @@
             </a>
           </li>
         </ul>
-
+        <div class="h-32 mx-auto mr-4 bg-red-600">
+          <h1 class="text-whity text-3xl text-center">This website is still in development</h1>
+        </div>
       </div>
     </div>
   </div>
