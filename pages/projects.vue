@@ -1,8 +1,8 @@
 <template>
   <div class=" pt-[56px] md:pt-[72px] h-screen">
     <div class=" lg:flex-row flex flex-col w-full h-full overflow-auto">
-      <ProjectImages :photos="projects[currentId].photos" />
-      <div class="bg-whity snap-mandatory snap-y lg:w-1/2 lg:max-h-full lg:h-full h-1/2 z-10 overflow-auto">
+      <ProjectImages :photos="projects[currentId].photos" v-memo="[currentId]" />
+      <div class="bg-whity snap-mandatory snap-y lg:w-1/2 lg:max-h-full lg:h-full h-1/2 z-10 overflow-auto" v-once>
         <ProjectInfo v-for="(project, i) in  projects " :project="project" :key="i" @current-id="id => currentId = id" />
       </div>
     </div>
@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-  import { Project } from 'types/project.type';
+  import { Project } from '~/types/project.type';
 
   let currentId = ref<number>(1);
 
