@@ -1,5 +1,6 @@
 <template>
-  <div class=" bg-secondary odd:bg-whity group snap-center flex justify-center h-full align-baseline" ref="element">
+  <div class=" bg-secondary odd:bg-whity group snap-center relative flex justify-center h-full align-baseline"
+    ref="element">
     <div class="w-3/4 my-auto">
       <h1 class="md:text-3xl mb-2 text-2xl font-semibold">{{ props.project.name }}</h1>
       <p class=" md:text-lg mb-1">{{ project.description }}</p>
@@ -21,7 +22,9 @@
         <a :href="project.link" v-if="project.link"><img src="~/assets/icons/redirect-icon.svg" class="w-8 h-8"
             alt="Redirect icon" target="_blank"></a>
       </div>
-
+    </div>
+    <div class="group-first:block hidden">
+      <ArrowButton class="bg-primary text-whity left-1/2 bottom-5 animate-bounce absolute" />
     </div>
   </div>
 </template>
